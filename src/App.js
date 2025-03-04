@@ -61,9 +61,9 @@ function App() {
         <p>Vi hjälper löpare att förbättra sin prestation.</p>
       </div>
       <div className="image-row">
-        <img src="/img-1.webp" alt="Image 1" className="small-image" />
+        <img src="/nils.jpg" alt="Image 1" className="small-image" />
         <img src="/img-4.webp" alt="Image 2" className="small-image" />
-        <img src="/img-5.avif" alt="Image 3" className="small-image" />
+        <img src="/Nils.jpeg" alt="Image 3" className="small-image" />
       </div>
       <div id="contact" className="section">
         <h1>Kontakt</h1>

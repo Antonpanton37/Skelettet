@@ -19,7 +19,7 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 50px;
+    padding: 150px;
     position: relative; /* To position content correctly */
   }
   /* Navbar styling */
@@ -84,7 +84,6 @@ html {
   /* "Om oss" image row styling */
 .image-row {
     display: flex;
-    justify-content: center;
     gap: 20px; /* Adds space between the images */
     margin-top: 30px; /* Add space from the text above */
   }
