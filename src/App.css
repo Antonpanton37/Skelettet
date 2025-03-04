@@ -65,7 +65,20 @@ html {
   .image-background.fade-out img {
     opacity: 0; /* Make the image fade out */
   }
-  
+  .kalk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.kalk > * { 
+    max-width: 700px; /* Justera detta efter kalkylatorns storlek */
+    width: 100%;
+}
+
+
   /* Video Background */
   .video-background {
     position: absolute;
@@ -86,12 +99,14 @@ html {
     display: flex;
     gap: 20px; /* Adds space between the images */
     margin-top: 30px; /* Add space from the text above */
+    flex-wrap: wrap;  
   }
   
   .small-image {
-    width: 500px; /* Set the size of the images */
+    width: 466.6px; /* Set the size of the images , OBS detta behövs kollas på, fuckar med hela format på hemsidan, optimerad för min skärm men kan bli rörigt med tex iphone osv*/
     height: 300px; /* Set a consistent height for the images */
     object-fit: cover; /* Ensures images maintain aspect ratio */
+    object-position: 50% 30%;
     border-radius: 10px; /* Optional: adds rounded corners */
   }
   
