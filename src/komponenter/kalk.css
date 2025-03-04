@@ -1,0 +1,147 @@
+/* Generell stil */
+body {
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Wrapper för kalkylatorn */
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Layout för att hålla kalkylator och resultat bredvid varandra */
+.calculator-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    width: 100%;
+    gap: 30px; /* Ger lite mer luft mellan sektionerna */
+}
+
+/* Stil för formulärboxen */
+.calculator-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 55%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Stil för titel */
+.calculator-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input-fält */
+.calculator-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.calculator-input:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+.calculator-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, black 0%, black var(--progress, 0%), white var(--progress, 0%), white 100%);
+    border: 2px solid black; /* Svart kant för att urskilja */
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Stil för "knappen" på slidern */
+.calculator-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000; /* Ändrar färgen på sliderns knapp till svart */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* Fylls på med svart när du drar */
+.calculator-slider::-webkit-slider-runnable-track::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: black; /* Fyllnadseffekt */
+    border-radius: 5px;
+    width: var(--progress, 0%);
+}
+
+
+
+/* Beräkningsknapp */
+.calculator-button {
+    width: 100%;
+    background: linear-gradient(90deg, #000000, #000000);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.calculator-button:hover {
+    background: linear-gradient(90deg, #a11823, #a11823);
+    transform: scale(1.02);
+}
+
+/* Resultatsektion */
+.calculator-result {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsiv anpassning */
+@media (max-width: 768px) {
+    .calculator-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calculator-box, .calculator-result {
+        width: 100%;
+    }
+}
