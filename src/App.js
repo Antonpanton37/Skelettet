@@ -41,7 +41,7 @@ function App() {
         {showVideo && (
           <div className="video-background">
             <video autoPlay loop muted>
-              <source src="/lopningvid.mp4" type="video/mp4" />
+              <source src="/untitled.mp4" type="video/mp4" />
             </video>
           </div>
         )}
