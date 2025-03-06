@@ -1,0 +1,54 @@
+.infobox-container {
+    display: flex; /* Gör att rutorna ligger på rad */
+    flex-wrap: wrap; /* Gör att de går till nästa rad om det inte får plats */
+    justify-content: center; /* Centrerar rutorna horisontellt */
+    gap: 20px; /* Lägger mellanrum mellan rutorna */
+    padding: 20px;
+    min-height: 200px;
+    align-items: flex-start; 
+  }
+  
+  .infobox {
+      width: 220px; /* Fast bredd */
+      min-height: 150px; /* Grundhöjd */
+      background: #1f1f1f; /* Samma färg som din banner */
+      border-radius: 10px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+      border: 1px solid #000;
+      padding: 15px;
+      text-align: center;
+      transition: height 0.5s ease-in-out; /* Bara höjden ändras vid klick */
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow: hidden; /* Förhindrar att innehåll sticker ut */
+    }
+    
+    .infobox.expanded {
+      height: auto; /* Gör att rutan växer endast nedåt */
+      min-height: 250px; /* Justera efter behov */
+      padding: 20px;
+    }
+    
+    
+    
+  
+  .infobox:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7); /* Ger en skugg-effekt vid hover */
+  }
+  
+  .infobox h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .infobox p {
+    font-size: 14px;
+    color: white;
+  }
+  

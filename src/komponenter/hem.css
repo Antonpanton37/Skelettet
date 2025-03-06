@@ -1,0 +1,41 @@
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Videon fyller hela skärmen */
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ser till att ikonen och texten centreras horisontellt */
+    justify-content: center;
+}
+
+.icon {
+    font-size: 4rem; /* Justera storlek */
+    margin-bottom: 10px;
+    color: white;
+    display: block; /* Gör den till ett block för bättre centrerad position */
+}

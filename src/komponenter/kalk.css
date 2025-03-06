@@ -9,10 +9,23 @@ body {
     min-height: 100vh;
 }
 
+.sectiona {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    position: relative; /* To position content correctly */
+    margin-top: 10vh;
+    scroll-margin-top: 100px;
+}
+
 /* Wrapper för kalkylatorn */
 .calculator-container {
     display: flex;
-    justify-content: center;
+    justify-content: center;        
     align-items: center;
     min-height: 100vh;
     width: 100%;

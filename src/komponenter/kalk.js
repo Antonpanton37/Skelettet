@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './kalk.css'; // Importera CSS-filen
 
+
 const RunningCalculator = () => {
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('');
@@ -28,6 +29,11 @@ const RunningCalculator = () => {
     };
 
     return (
+        <div id="calculator" className="sectiona">
+        <h1>Kalkylator</h1>
+        <p>Här kan du beräkna din löptakt.</p>
+       
+
         <div className="calculator-container">
             <div className="calculator-content">
                 {/* Formulärsektionen */}
@@ -96,6 +102,8 @@ const RunningCalculator = () => {
                 )}
             </div>
         </div>
+        </div>
+
     );
 };
 
