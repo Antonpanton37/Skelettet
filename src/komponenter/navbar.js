@@ -1,19 +1,35 @@
-
-import React, { useState } from 'react';
-import { Link } from 'react-scroll'; // Importera Link från react-scroll
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRunning } from '@fortawesome/free-solid-svg-icons'; 
+import { faRunning } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   const [click, setClick] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className='navbar'>
+      <nav className={`navbar ${scrolled ? "scrolled" : "transparent"}`}>
         <div className='navbar-container'>
           <a href="#" className='navbar-logo' onClick={closeMobileMenu}>
             <FontAwesomeIcon icon={faRunning} className="navbar-icon" /> PacePal
