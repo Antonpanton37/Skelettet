@@ -4,7 +4,7 @@ import './omoss.css';
 function Omoss () {
     return(
     <>
-        <div id="about-us" className="sectionb">
+        <div id="about-us" className="section">
         <h1>Om oss</h1>
         <p>Vi hjälper löpare att förbättra sin prestation.</p>
       </div>

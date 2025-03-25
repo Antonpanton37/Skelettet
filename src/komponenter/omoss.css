@@ -1,13 +1,3 @@
-.sectionb {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 150px;
-    position: relative; /* To position content correctly */
-  }
 /* För att .image-row ska vara centrerad och ta upp hela bredden */
 .image-row {
   display: flex;

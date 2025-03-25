@@ -4,7 +4,7 @@ import './kontakt.css';
 function Kontakt () {
     return(
     <>
-        <div id="contact" className="sectionc">
+        <div id="contact" className="section">
         <h1>Kontakt</h1>
         <p>Kontakta oss för mer information.</p>
       </div>
