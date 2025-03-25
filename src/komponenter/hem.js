@@ -5,7 +5,7 @@ import './hem.css';
 
 const Home = () => {
   return (
-    <div className="video-container">
+    <div div id="home" className="video-container">
       {/* Bakgrundsvideo */}
       <div className="video-background">
         <video autoPlay loop muted>
