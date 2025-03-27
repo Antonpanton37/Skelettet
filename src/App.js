@@ -6,18 +6,17 @@ import './App.css';
 import Footer from './komponenter/footer';
 import RunningCalculator from './komponenter/kalk';
 import Omoss from './komponenter/omoss';
-import Kontakt from './komponenter/kontakt';
-import InfoSection from './komponenter/info';
+import Information from './komponenter/information';
+
 function App() {
   return (
     <>
       <Navbar />
       <Home /> 
       <RunningCalculator />
-      <InfoSection/>
+      <Information/>
       <Omoss/>
-      <Kontakt/>
-      <Footer />
+      <Footer/>
     </>
   );
 }

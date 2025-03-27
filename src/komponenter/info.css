@@ -10,9 +10,9 @@
   
   .infobox {
       width: 220px; /* Fast bredd */
-      min-height: 150px; /* Grundhöjd */
-      background: #1f1f1f; /* Samma färg som din banner */
-      border-radius: 10px;
+      min-height: 240px; /* Grundhöjd */
+      background: #3c4b35; /* Samma färg som din banner */
+      border-radius: 40px;
       box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
       border: 1px solid #000;
       padding: 15px;

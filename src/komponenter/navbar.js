@@ -49,13 +49,13 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to="about-us" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
-                Om oss
+              <Link to="contact" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
+                Information
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to="contact" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
-                Kontakt
+              <Link to="about-us" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
+                Om oss
               </Link>
             </li>
           </ul>

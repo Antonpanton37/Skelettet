@@ -1,11 +1,11 @@
 html {
     scroll-behavior: smooth;
   }
- 
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
   }
-
+  
   
   .content {
     position: relative;
@@ -21,6 +21,7 @@ html {
   justify-content: left;
   align-items: center;
   text-align: left;
-  padding: 110px;
+  padding: 105px;
   position: relative;
+  color: black;
 }

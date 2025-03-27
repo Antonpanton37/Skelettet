@@ -1,0 +1,40 @@
+.info-section {
+    padding-left: 100px; /* Flytta hela sektionen åt vänster */
+    margin-top: 50px;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .subheadings {
+    display: flex;
+    width: 100%;
+    max-width: 1000px; /* eller vad som passar */
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .left, .right {
+    flex: 1;
+  }
+  
+  .left {
+    text-align: right;
+    padding-right: 300px; /* lite luft inåt */
+  }
+  
+  .right {
+    text-align: left;
+    padding-left: 300px;
+  }
+  
+  .subheading {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  
+  
