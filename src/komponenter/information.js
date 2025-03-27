@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './information.css';
-import InfoSection from './info'; // lägg till Infosection ifall du vill ha blobbar :)
+import InfoSection from './info'; // lägg till Infosection ifall du vill ha blobbar :) 
 
 
 function Information () {

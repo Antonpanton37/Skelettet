@@ -42,7 +42,7 @@ function Navbar() {
               <Link to="home" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
                 Start
               </Link>
-            </li>
+            </li> 
             <li className='nav-item'>
               <Link to="calculator" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
                 Kalkylator

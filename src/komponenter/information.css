@@ -15,7 +15,7 @@
     width: 100%;
     max-width: 1000px; /* eller vad som passar */
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 20px; 
   }
   
   .left, .right {

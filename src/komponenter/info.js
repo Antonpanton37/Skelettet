@@ -5,7 +5,7 @@ import "./info.css";
 const InfoBox = ({ title, shortText, longText }) => {
   const [expanded, setExpanded] = useState(false);
 
-  return (
+  return ( 
     <div
       className={`infobox ${expanded ? "expanded" : ""}`}
       onClick={() => setExpanded(!expanded)}

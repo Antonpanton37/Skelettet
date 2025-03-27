@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './kalk.css';
+import './kalk.css'; 
 
 const RunningCalculator = () => {
     const [age, setAge] = useState('');

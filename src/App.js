@@ -6,7 +6,7 @@ import './App.css';
 import Footer from './komponenter/footer';
 import RunningCalculator from './komponenter/kalk';
 import Omoss from './komponenter/omoss';
-import Information from './komponenter/information';
+import Information from './komponenter/information'; 
 
 function App() {
   return (

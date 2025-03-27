@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center; /* Centrerar bilderna horisontellt */
   gap: 20px; /* Lägger till mellanrum mellan bilderna */
-  flex-wrap: wrap; /* Gör att bilderna bryts till nästa rad vid behov */
+  flex-wrap: wrap; /* Gör att bilderna bryts till nästa rad vid behov */ 
   width: 100vw; /* Gör att .image-row tar upp hela bredden på sidan */
   margin: 0 auto; /* Se till att den centreras i förhållande till föräldern */
   padding: 20px 0; /* Lägg till lite utrymme ovanför/below */
