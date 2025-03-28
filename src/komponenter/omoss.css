@@ -1,8 +1,8 @@
 /* För att .image-row ska vara centrerad och ta upp hela bredden */
 .image-row {
   display: flex;
-  justify-content: space-between; /* Centrerar bilderna horisontellt */
-  gap: 10px; /* Lägger till mellanrum mellan bilderna */
+  justify-content: center; /* Centrerar bilderna horisontellt */
+  gap: 50px; /* Lägger till mellanrum mellan bilderna */
   flex-wrap: wrap; /* Gör att bilderna bryts till nästa rad vid behov */ 
   width: 100vw; /* Gör att .image-row tar upp hela bredden på sidan */
   margin: 0 auto; /* Se till att den centreras i förhållande till föräldern */
@@ -27,5 +27,57 @@
   }
 }
 
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
-  
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Bildraden nedan */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 40px 0;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.small-image {
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .small-image {
+    height: auto;
+    max-width: 100%;
+  }
+}

@@ -75,7 +75,7 @@ const RunningCalculator = () => {
                 <div className={`calculator-content ${hasResult ? "with-result" : "centered"}`}>
                     {/* Formuläret */}
                     <div className="calculator-box">
-                        <h2 className="calculator-title">Running Calculator</h2>
+                        <h2 className="calculator-title">PET Calculator</h2>
 
                         <label>Ålder:</label>
                         <input 

@@ -9,7 +9,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>KONTAKT</h3>
+          <h3>Kontakt</h3>
           <p>Beställning</p>
           <p>Betalning</p>
           <p>Byte & retur</p>
@@ -18,7 +18,7 @@ function Footer() {
           <p>Kontakta oss</p>
         </div>
         <div className="footer-section">
-          <h3>INFORMATION</h3>
+          <h3>Information</h3>
           <p>Integritetspolicy</p>
           <p>Cookies</p>
           <p>Köpvillkor</p>

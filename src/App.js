@@ -12,10 +12,19 @@ function App() {
   return (
     <>
       <Navbar />
+
+
       <Home /> 
+  
+
       <RunningCalculator />
+
+
       <Information/>
+
+
       <Omoss/>
+      
       <Footer/>
     </>
   );

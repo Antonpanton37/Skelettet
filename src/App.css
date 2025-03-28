@@ -25,3 +25,17 @@ html {
   position: relative;
   color: black;
 }
+.divider {
+  height: 2px;
+  width: 100%;
+  margin: 60px auto;
+  background-color: #ccc;
+  border: none;
+}
+
+#about-us {
+  background-color: #ccc;
+}
+#bilder {
+  background-color: ccc ;
+}
