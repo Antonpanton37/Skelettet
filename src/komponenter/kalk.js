@@ -36,7 +36,7 @@ const RunningCalculator = () => {
 
         try {
             // 1. Skicka till Flask-backend
-            const response = await fetch("http://127.0.0.1:5000/calculate", {
+            const response = await fetch("https://backend-1-s6ox.onrender.com/calculate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
