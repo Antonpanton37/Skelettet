@@ -9,7 +9,7 @@ const Home = () => {
       {/* Bakgrundsvideo */}
       <div className="video-background">
         <video autoPlay loop muted>
-          <source src="/untitled.mp4" type="video/mp4" />
+          <source src="/Untitled.mp4" type="video/mp4" />
         </video>
       </div>
 
