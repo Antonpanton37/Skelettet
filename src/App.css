@@ -15,7 +15,7 @@ html {
 
 
 .section {
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -40,5 +40,12 @@ html {
   background-color: ccc ;
 }
 #contact {
-  background-color: #ccc;
+  position: relative;
+  background-color: #d3dde8;
+  overflow: hidden;
+  border-radius: 80px 80px;
 }
+
+
+
+
