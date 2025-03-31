@@ -22,7 +22,7 @@
   }
   
   .navbar.scrolled {
-    background: #2d4a22; /* Fast färg när man scrollar */
+    background: #1f2d3d; /* Fast färg när man scrollar */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Mjuk skugga */
   }
   

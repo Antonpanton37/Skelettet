@@ -9,38 +9,19 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>Kontakt</h3>
-          <p>Beställning</p>
-          <p>Betalning</p>
-          <p>Byte & retur</p>
-          <p>Frakt & leverans</p>
-          <p>Reklamation</p>
-          <p>Kontakta oss</p>
-        </div>
-        <div className="footer-section">
-          <h3>Information</h3>
-          <p>Integritetspolicy</p>
-          <p>Cookies</p>
-          <p>Köpvillkor</p>
-          <p>FAQ</p>
-          <p>Presentkort</p>
-        </div>
-        <div className="footer-section">
-          <h3>FÖLJ OSS</h3>
-          <div className="social-icons">
-        <span role="img" aria-label="Facebook">
-        <FontAwesomeIcon icon={faFacebook} />
-        </span>
-        <span role="img" aria-label="Instagram">
-            <FontAwesomeIcon icon={faInstagram} />
-        </span>
-        <span role="img" aria-label="TikTok">
-            <FontAwesomeIcon icon={faTiktok} />
-        </span>
-        </div>
+          
+   
+      <h2>Kontakta oss</h2>
+      <p>För alla förfrågningar, tveka inte att höra av dig. Vi är alltid på jakt efter kreativa idéer, intressanta samarbetspartners och nya perspektiv.</p>
+      <p>Vi är baserade på Chalmers tekniska högskola i Göteborg.</p>
+      <p>info@pacepal.se</p>
 
-        </div>
-      </div>
+    </div>
+
+    <div className="footer-image-container">
+      <img src="/Nils.jpeg" alt="PacePal" className="footer-image" />
+    </div>
+  </div>
       <div className="footer-bottom">
         <p>© 2025 PacePal. Alla rättigheter förbehållna.</p>
       </div>

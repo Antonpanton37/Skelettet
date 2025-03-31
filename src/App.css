@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
   }
   body {  
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mulish', sans-serif;
     color: black;
   }
   
@@ -33,9 +33,12 @@ html {
   border: none;
 }
 
-#about-us {
+/* #about-us {
   background-color: #ccc;
-}
+} */
 #bilder {
   background-color: ccc ;
+}
+#contact {
+  background-color: #ccc;
 }

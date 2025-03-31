@@ -1,5 +1,5 @@
 .footer {
-    background-color: #2d4a22; 
+    background-color: #1f2d3d; 
     color: #fff;
     padding: 20px 0;
     width: 100%;
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1500px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
     flex-wrap: wrap;
@@ -18,9 +18,9 @@
   
   .footer-section {
     flex: 1;
-    min-width: 200px;
+    max-width: 600px;
     padding: 10px;
-    text-align: center;
+    text-align: left;
   }
   
   .footer-section h3 {
@@ -33,25 +33,20 @@
   .footer-section p {  
     font-size: 1rem;
     margin: 5px 0;
-    cursor: pointer;
   }
   
-  .footer-section p:hover {
-    text-decoration: underline;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    font-size: 1.5rem;
-  }
-  
+
+
   .footer-bottom {
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
-    background: #2d4a22;
+    background: #1f2d3d;
     margin-top: 20px;
   }
-  
+  .footer-image{
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 10px;
+  }

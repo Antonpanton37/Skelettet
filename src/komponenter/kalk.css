@@ -22,6 +22,7 @@ body {
 .calculator-content {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     max-width: 900px;
     width: 100%;
@@ -30,7 +31,7 @@ body {
 
 /* Stil för formulärboxen */
 .calculator-box {
-    background: white;
+    background: #c6d6e9;
     padding: 20px 25px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -104,7 +105,7 @@ body {
 /* Beräkningsknapp */
 .calculator-button {
     width: 100%;
-    background: linear-gradient(90deg, #000000, #000000);
+    background: linear-gradient(90deg, black, black);
     color: white;
     padding: 12px;
     border: none;
@@ -117,7 +118,7 @@ body {
 }
 
 .calculator-button:hover {
-    background: linear-gradient(90deg, #a11823, #a11823);
+    background: linear-gradient(90deg, #333333, #333333);
     transform: scale(1.02);
 }
 
@@ -146,10 +147,24 @@ body {
     }
 }
 
+.calculator-advice {
+	margin-top: 20px;
+	text-align: left;
+	background-color: #f3f4f6;
+	padding: 10px 15px;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+/* LLÄGG TITLL DETTA OM DU VILL HA KALK I MITTEN Responsiv anpassning 
 .calculator-content.centered {
     justify-content: center;
 }
-/* När man HAR fått ett resultat – layout med två kolumner */
+/* När man HAR fått ett resultat – layout med två kolumner 
 .calculator-content.with-result {
-    justify-content: space-between;
-}
+    justify-content: space-between; 
+} */ 
+ 
