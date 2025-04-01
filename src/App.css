@@ -45,11 +45,29 @@ html {
   overflow: hidden;
   border-radius: 80px 80px;
 }
-
 @media (max-width: 768px) {
+  #contact {
+    padding: 40px 40px;
+
+    margin: 0 100px; /* ger luft från kanterna */
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
   .section {
-    padding: 40px 20px;
+    padding: 40px 20px; /* Mindre padding = mer luft */
+    height: auto; /* Undvik 110vh på mobil */
     text-align: center;
+    align-items: center;
+  }
+
+  h1, h2, h3, p {
+    font-size: 1rem;
+    line-height: 1.4;
   }
 
   .navbar {
@@ -57,10 +75,6 @@ html {
   }
 }
 
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
 
 
 

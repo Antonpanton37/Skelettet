@@ -1,7 +1,7 @@
 .video-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Videon fyller hela skärmen */
+    height: 100dvh; /* Videon fyller hela skärmen */
     overflow: hidden;
 }
 
@@ -17,6 +17,7 @@
     width: 100vw;
     height: 100vw;
     object-fit: cover;
+    object-position: center center;
     position: absolute;
     top: 0;
     left: 0;
@@ -53,5 +54,11 @@
     .navbar {
       flex-direction: column;
     }
+    .video-background video {
+        width: 180vw; /* gör videon bredare än skärmen */
+        height: 150vh;
+        object-fit: cover;
+        object-position: center center;
+      }
   }
   
