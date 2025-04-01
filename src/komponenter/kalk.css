@@ -15,7 +15,7 @@ body {
 
 /* Wrapper för kalkylatorn */
 .calculator-container {
-    padding: 20px;
+    padding: 10px;
   }
   
 /* Layout för att hålla kalkylator och resultat bredvid varandra */
@@ -34,7 +34,7 @@ body {
     background: #ccd5e0;
     padding: 20px 25px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgb(147, 150, 171);
     width:50%;
 
     text-align: left;
@@ -130,8 +130,8 @@ body {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 40%;
+    box-shadow: 0 5px 15px rgba(190, 189, 189, 0.8);
+    width: 45%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -153,7 +153,6 @@ body {
 	background-color: #f3f4f6;
 	padding: 10px 15px;
 	border-radius: 8px;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 

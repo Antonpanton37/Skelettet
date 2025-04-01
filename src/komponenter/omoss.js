@@ -8,7 +8,12 @@ function Omoss() {
         <div className="about-text">
           <h1>Om oss</h1>
           <p>
-            Vi är 6 stycken elever som tillsammans har tagit fram bla bla bla och det visas här på hemsidan. 
+          Vi är sex studenter vid Chalmers Tekniska Högskola som, inom ramen för vårt kandidatarbete, har utvecklat denna hemsida med fokus på säker och hållbar löpning i varmare väder.
+          </p>
+          <p>Arbetet grundar sig i vår gemensamma passion för hälsa och rörelse, och idén tog form i samarbete med en läkare, specialist inom akutsjukvård. Genom hans insikter blev det tydligt att många löpare underskattar riskerna som höga temperaturer kan medföra.
+
+          </p>
+          <p>Vårt mål är att tillhandahålla relevant, lättillgänglig och forskningsbaserad information som hjälper löpare att fatta informerade beslut och minska risken för skador i varmare vädertemperaturer.
           </p>
         </div>
         <div className="about-image">

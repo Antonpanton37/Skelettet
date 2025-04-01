@@ -13,7 +13,7 @@ function Footer() {
    
       <h2>Kontakta oss</h2>
       <p>För alla förfrågningar, tveka inte att höra av dig. Vi är alltid på jakt efter kreativa idéer, intressanta samarbetspartners och nya perspektiv.</p>
-      <p>Vi är baserade på Chalmers tekniska högskola i Göteborg.</p>
+      <p>Vi är baserade på Chalmers Tekniska Högskola i Göteborg.</p>
       <p>info@pacepal.se</p>
 
     </div>

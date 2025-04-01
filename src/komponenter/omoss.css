@@ -30,9 +30,9 @@
 .about-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 60px;
-  gap: 40px;
+  justify-content: flex-start;
+  padding: 100px;
+  gap: 400px;
   flex-wrap: wrap;
   
 }
@@ -40,19 +40,21 @@
 .about-text {
   flex: 1;
   min-width: 250px;
+  text-align: justify;
 }
 
 .about-image {
   flex: 1;
-  max-width:200px;
+  max-width:250px;
   display: flex;
   justify-content: flex-end;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
+  max-width: 400px; 
+  /*gör runda kanterna  på bilderna*/
+  border-radius: 90px; 
   object-fit: cover;
 }
 

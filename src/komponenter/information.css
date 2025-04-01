@@ -16,7 +16,7 @@
     max-width: 1000px; /* eller vad som passar */
     justify-content: space-between;
     margin-top: 20px; 
-    align-items: center;
+    align-items: flex-start;
   }
   
   .left, .right {
@@ -38,6 +38,7 @@
     font-weight: bold;
     font-size: 22px;
     text-align: center;
+    margin-top: 0; /* Gör så att oavsett textlängd så är rubrikerna på samma höjdnivå*/
   }
   
   
