@@ -39,3 +39,15 @@
     color: white;
     display: block; /* Gör den till ett block för bättre centrerad position */
 }
+
+@media (max-width: 768px) {
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+    }
+  }
+  

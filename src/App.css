@@ -46,6 +46,17 @@ html {
   border-radius: 80px 80px;
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+}
+
 
 
 

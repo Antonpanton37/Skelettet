@@ -50,3 +50,15 @@
     object-position: 50% 50%;
     border-radius: 10px;
   }
+
+  @media (max-width: 768px) {
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+    }
+  }
+  
