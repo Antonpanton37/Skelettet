@@ -22,8 +22,7 @@ const RunningCalculator = () => {
 			slider.style.background = `linear-gradient(to right, black 0%, black ${percentage}%, white ${percentage}%, white 100%)`;
 		}
 	}, [pace]);
-
-	// När man trycker på Beräkna
+    {/*Hämtar från pythonkoden*/}
 	const handleCalculate = async () => {
 		const data = {
 			age: parseInt(age),
@@ -34,7 +33,6 @@ const RunningCalculator = () => {
 		};
 
 		try {
-			// 1. Skicka till Flask-backend
 			const response = await fetch("https://backend-1-s6ox.onrender.com/calculate", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
@@ -45,7 +43,6 @@ const RunningCalculator = () => {
 			setResult(responseData.result);
 			setHasResult(true);
 
-			// 2. Sätt råd baserat på PET
 			if (responseData.result < 10) {
 				setAdvice("Det är svalt ute – klä dig varmt när du springer.");
 			} else if (responseData.result >= 10 && responseData.result <= 18) {
@@ -53,8 +50,7 @@ const RunningCalculator = () => {
 			} else {
 				setAdvice("Det är varmt – se till att dricka ordentligt och undvik att springa mitt på dagen.");
 			}
-
-			// 3. Hämta väder från WeatherAPI
+            {/*API-KEY*/}
 			if (location) {
 				const apiKey = '967994137b684f6c886100836252503';
 				const weatherResponse = await fetch(
@@ -63,15 +59,12 @@ const RunningCalculator = () => {
 				const weatherData = await weatherResponse.json();
 
 				if (weatherData && weatherData.forecast) {
-					// Hämta alla timmar för dagen
 					const forecastHours = weatherData.forecast.forecastday[0].hour;
 
-					// Hitta den högsta temperaturen och när den inträffar
 					const maxTempHour = forecastHours.reduce((max, hour) =>
 						hour.temp_c > max.temp_c ? hour : max
 					, forecastHours[0]);
 
-					// Sätt forecast med max temp och tidpunkt
 					setForecast([{
 						time: maxTempHour.time.split(' ')[1],
 						temp: maxTempHour.temp_c,
@@ -86,6 +79,12 @@ const RunningCalculator = () => {
 		}
 	};
 
+	// Hanterar både Enter och knapptryck
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		await handleCalculate();
+	};
+
 	return (
 		<div id="calculator" className="section">
 			<h1>Kalkylator</h1>
@@ -93,8 +92,7 @@ const RunningCalculator = () => {
 
 			<div className="calculator-container">
 				<div className="calculator-content">
-					{/* Formulär */}
-					<div className="calculator-box">
+					<form className="calculator-box" onSubmit={handleSubmit}>
 						<h2 className="calculator-title">PET Calculator</h2>
 
 						<label>Ålder:</label>
@@ -102,6 +100,7 @@ const RunningCalculator = () => {
 							type="number"
 							className="calculator-input"
 							placeholder="Ange din ålder"
+							value={age}
 							onChange={(e) => setAge(e.target.value)}
 						/>
 
@@ -122,6 +121,7 @@ const RunningCalculator = () => {
 							type="number"
 							className="calculator-input"
 							placeholder="Ange din vikt"
+							value={weight}
 							onChange={(e) => setWeight(e.target.value)}
 						/>
 
@@ -130,6 +130,7 @@ const RunningCalculator = () => {
 							type="text"
 							className="calculator-input"
 							placeholder="Ange din plats (t.ex. Göteborg)"
+							value={location}
 							onChange={(e) => setLocation(e.target.value)}
 						/>
 
@@ -144,15 +145,11 @@ const RunningCalculator = () => {
 							onChange={(e) => setPace(e.target.value)}
 						/>
 
-						<button
-							className="calculator-button"
-							onClick={handleCalculate}
-						>
+						<button type="submit" className="calculator-button">
 							Beräkna
 						</button>
-					</div>
-
-					{/* Resultat */}
+					</form>
+                    {/*Resultat*/}
 					<div className="calculator-result">
 						<h3>Ditt beräknade resultat:</h3>
 						{result !== null ? (
@@ -174,8 +171,7 @@ const RunningCalculator = () => {
 						) : (
 							<p>-</p>
 						)}
-
-						{/* Råd */}
+                        {/*Råd*/}
 						<div className="calculator-advice">
 							<p>{advice || "Råd kommer att visas här efter beräkning."}</p>
 						</div>

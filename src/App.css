@@ -33,9 +33,9 @@ html {
   border: none;
 }
 
-/* #about-us {
-  background-color: #ccc;
-} */
+#about-us {
+  min-height: 100vh;
+} 
 #bilder {
   background-color: ccc ;
 }
@@ -45,6 +45,7 @@ html {
   overflow: hidden;
   border-radius: 80px 80px;
 }
+
 
 
 
