@@ -34,6 +34,7 @@
     width: 100%;
     max-width: 100%;
     padding: 0 20px;
+    box-sizing: border-box;
   }
   
   .navbar-logo {
@@ -94,6 +95,12 @@
   }
   
   @media screen and (max-width: 768px) {
+    .navbar-container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 16px;
+      width: 100%;
+    }
     .NavbarItems {
       position: relative;
     }
@@ -132,10 +139,8 @@
     }
   
     .navbar-logo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(25%, 50%);
+      font-size: 1.5rem;
+      margin-left: 0;
     }
   
     .menu-icon {
