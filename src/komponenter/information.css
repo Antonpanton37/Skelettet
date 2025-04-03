@@ -50,7 +50,7 @@
 @media (max-width: 768px) {
   .subheadings {
     flex-direction: column; /* Byt från rad till kolumn */
-    align-items: center; /* Centrerar texten */
+    align-items: center;  /* Ceddddssntrerar texten */
   }
 
   .subheading-container {
