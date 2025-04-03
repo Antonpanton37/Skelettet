@@ -46,3 +46,25 @@
   max-width: 1000px; /* Maxbredd så den inte blir för stor */
   border-radius: 10px; /* Rundade hörn för en snyggare look */
 }
+
+@media (max-width: 768px) {
+  .subheadings {
+    flex-direction: column; /* Byt från rad till kolumn */
+    align-items: center; /* Centrerar texten */
+  }
+
+  .subheading-container {
+    width: 100%; /* Låt varje container ta upp hela bredden */
+    padding: 10px; /* Minska padding för att spara plats */
+    text-align: left; /* Justera texten till vänster för bättre läsbarhet */
+  }
+
+  .subheading-container::before {
+    display: none; /* Ta bort linjerna mellan boxarna på mobil */
+  }
+
+  .info-image {
+    width: 100%; /* Låt videon fylla hela bredden på små skärmar */
+    max-width: none; /* Ingen maxbredd så den alltid anpassas */
+  }
+}

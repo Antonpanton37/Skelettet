@@ -191,3 +191,59 @@
     .navbar .nav-links:hover {
       color: #040202;
     }
+    @media screen and (max-width: 768px) {
+      .navbar-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        width: 100%;
+      }
+    
+      /* Fixar att menyn täcker skärmen när den är öppen */
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Dölj menyn utanför skärmen */
+        width: 100%;
+        height: 100vh; /* Full höjd */
+        background: rgba(31, 45, 61, 0.95); /* Semi-transparent bakgrund */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.4s ease-in-out;
+      }
+    
+      .nav-menu.active {
+        left: 0; /* Skjuter in menyn */
+      }
+    
+      /* Justerar länkar i mobilmenyn */
+      .nav-links {
+        padding: 15px;
+        font-size: 1.5rem;
+      }
+    
+      .nav-links:hover {
+        background: none;
+        border-bottom: 3px solid white;
+      }
+    
+      /* Större ikoner och bättre placering */
+      .menu-icon {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+    
+      .menu-icon i {
+        transition: transform 0.3s ease-in-out;
+      }
+    
+      /* Gör att krysset roterar snyggt */
+      .fa-times {
+        transform: rotate(90deg);
+      }
+    }
+    
