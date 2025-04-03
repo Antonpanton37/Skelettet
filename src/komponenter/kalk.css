@@ -13,7 +13,13 @@ body {
     min-height: 100vh;
 }
 
-
+.calculator-subtitle {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
 
 /* Wrapper för kalkylatorn */
 .calculator-container {
@@ -156,6 +162,7 @@ body {
 	padding: 10px 15px;
 	border-radius: 8px;
 }
+
 
 
 

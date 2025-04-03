@@ -88,7 +88,7 @@ const RunningCalculator = () => {
 	return (
 		<div id="calculator" className="section">
 			<h1>Kalkylator</h1>
-			<p>Här kan du beräkna ditt PET-värde och få tillhörande råd.</p>
+			<p className="calculator-subtitle">Här kan du beräkna ditt PET-värde och få tillhörande råd.</p>
 
 			<div className="calculator-container">
 				<div className="calculator-content">
