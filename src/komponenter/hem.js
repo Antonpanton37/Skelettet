@@ -8,7 +8,7 @@ const Home = () => {
     <div div id="home" className="video-container">
       {/* Bakgrundsvideo */}
       <div className="video-background">
-        <video autoPlay loop muted playsinline preload="auto" className="w-full h-auto object-cover pointer-events-none">
+        <video autoPlay loop muted playsInline preload="auto" className="w-full h-auto object-cover pointer-events-none">
           <source src="/Untitled.mp4" type="video/mp4"/>
         </video>
       </div>

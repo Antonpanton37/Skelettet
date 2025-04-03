@@ -61,6 +61,8 @@
         object-fit: cover;
         object-position: center center;
         pointer-events: none;
+        touch-action: none;
+        user-select: none;
       }
   }
   
