@@ -36,7 +36,6 @@
   }
   
 
-
   .footer-bottom {
     text-align: center;
     padding: 10px;
@@ -56,9 +55,23 @@
       padding: 40px 20px;
       text-align: center;
     }
-  
-    .navbar {
-      flex-direction: column;
+    .footer-bottom{
+      text-align: center;
     }
+    .footer-image{
+      height: 180px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      border-radius: 10px;
+      padding-right: 30px;
+    }
+    .footer-section {
+      flex: 1;
+      max-width: 400px;
+      padding: 30px;
+      text-align: center;
+    }
+    
+
   }
   

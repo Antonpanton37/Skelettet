@@ -57,7 +57,7 @@
     }
     .video-background video {
         width: 180vw; /* gör videon bredare än skärmen */
-        height: 150vh;
+        height: 90vh;
         object-fit: cover;
         object-position: center center;
         pointer-events: none;
