@@ -68,12 +68,19 @@
 }
 
 @media (max-width: 768px) {
-  .small-image {
-    height: flex;
-    max-width: 100%;
-  }
   /* Bildraden nedan */
   .image-row {
     display: none;
   }
+  .about-container {
+    gap: 0px; /* Ta bort gapet mellan text och bild */
+    flex-direction: column; /* Lägg text och bild under varandra */
+    align-items: center; 
+    
+  }
+
+  .about-text {
+    margin-bottom: 10px; /* Lite spacing innan bilden */
+  }
+  
 }
