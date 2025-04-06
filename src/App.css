@@ -51,6 +51,9 @@ html {
     margin: 0 100px; /* ger luft från kanterna */
     box-sizing: border-box;
   }
+  body, html { 
+    overflow-x: hidden;  /* gör så att vi inte kan åka ut till höger */
+  }
 
   body {
     padding: 0;
