@@ -32,9 +32,6 @@
       min-height: 250px; /* Justera efter behov */
       padding: 20px;
     }
-    
-    
-    
   
   .infobox:hover {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7); /* Ger en skugg-effekt vid hover */
