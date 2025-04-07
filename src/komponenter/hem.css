@@ -52,9 +52,7 @@
       text-align: center;
     }
   
-    .navbar {
-      flex-direction: column;
-    }
+
     .video-background video {
         width: 180vw; /* gör videon bredare än skärmen */
         height: 90vh;
@@ -65,4 +63,5 @@
         user-select: none;
       }
   }
+  
   

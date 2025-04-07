@@ -95,8 +95,11 @@
   }
   
   @media screen and (max-width: 768px) {
-    .navbar{
-      position: sticky;
+    .navbar {
+      /* Viktigt att behålla dessa! */
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
     }
     .navbar-container {
@@ -147,13 +150,13 @@
   
     .navbar-logo {
       font-size: 1.5rem;
-      margin-left: 75px;
+      margin-left: 40px;
     }
   
     .menu-icon {
       display: block;
       position: absolute;
-      margin-right: 50px;
+      margin-right: 40px;
       top: 0;
       right: 0;
       transform: translate(-100%, 60%);
