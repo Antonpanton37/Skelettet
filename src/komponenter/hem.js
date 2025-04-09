@@ -16,7 +16,7 @@ const Home = () => {
       {/* Text och ikon över videon */}
       <div className="content">
         <FontAwesomeIcon icon={faRunning} className="icon" />
-        <p>Välkommen till PacePal!</p>
+        <p>Välkommen till RunWise!</p>
       </div>
     </div>
   );

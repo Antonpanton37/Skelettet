@@ -33,7 +33,7 @@ function Navbar() {
       <div className="NavbarItems">
           <div className='navbar-container'>
             <a href="#" className='navbar-logo' onClick={closeMobileMenu}>
-              <FontAwesomeIcon icon={faRunning} className="navbar-icon" /> PacePal
+              <FontAwesomeIcon icon={faRunning} className="navbar-icon" /> RunWise
             </a>
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
