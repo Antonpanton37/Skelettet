@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './information.css';
 
 function Information() {
@@ -19,7 +19,6 @@ function Information() {
     if (!isMobile) return;
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
-
   const data = [
     {
       title: 'PET-värde',
@@ -29,7 +28,7 @@ PET olika väderförhållandens effekt på den faktiska temperatur som påverkar
 fysiologiska funktioner. Exempelvis kan värme uppfattas som mer intensiv vid hög luft-
 fuktighet än vid torrt väder. Vid Göteborgsvarvet har distans, tid och antal deltagare varit
 relativt konstanta över åren. Därmed har PET-värdets variation visat sig vara den starkast
-bidragande faktorn till antalet löpare som kollapsar.`
+bidragande faktorn till antalet löpare som kollapsar.`,
     },
     {
       title: 'Ansträngningsutlöst kollaps',
@@ -39,12 +38,12 @@ Marathon 2024 behövde en mindre andel löpare ambulansupphämtning, trots högr
 raturer än under Göteborgsvarvet. En förklaring kan vara att halvmaraton lockar fler
 amatörlöpare, medan maratonlöpare ofta är mer erfarna och beredda på de fysiska ansträng-
 ningarna. Studier visar exempelvis att tävlingslöpare har en bättre förmåga att anpassa
-sin hastighet för att justera kroppens energinivå innan kroppstemperaturen blir för hög.`
+sin hastighet för att justera kroppens energinivå innan kroppstemperaturen blir för hög.`,
     },
     {
       title: 'Vad är vårat mål med sprida denna information?',
-      content: `Vårt mål är att öka kunskapen om hur väderförhållanden påverkar fysisk prestation och hälsorisker vid löpning. Genom att analysera samband mellan temperatur, ansträngning och kollapser under lopp kan vi bidra till bättre förberedelse, minskade medicinska incidenter och en säkrare löpupplevelse för alla deltagare.`
-    }
+      content: `Vårt mål är att öka kunskapen om hur väderförhållanden påverkar fysisk prestation och hälsorisker vid löpning. Genom att analysera samband mellan temperatur, ansträngning och kollapser under lopp kan vi bidra till bättre förberedelse, minskade medicinska incidenter och en säkrare löpupplevelse för alla deltagare.`,
+    },
   ];
 
   return (
@@ -65,7 +64,11 @@ sin hastighet för att justera kroppens energinivå innan kroppstemperaturen bli
               </p>
             )}
 
-            <p className={`subtext ${activeIndex === index || !isMobile ? 'visible' : 'hidden'}`}>
+            <p
+              className={`subtext ${
+                activeIndex === index || !isMobile ? 'visible' : 'hidden'
+              }`}
+            >
               {item.content}
             </p>
           </div>
