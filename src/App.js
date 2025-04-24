@@ -7,6 +7,7 @@ import Footer from './komponenter/footer';
 import RunningCalculator from './komponenter/kalk';
 import Omoss from './komponenter/omoss';
 import Information from './komponenter/information'; 
+import Rad from './komponenter/rad'
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
 
 
       <Omoss/>
+
+      <Rad/>
       
       <Footer/>
     </>
