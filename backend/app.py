@@ -100,7 +100,7 @@ def calculate():
         G = 900,  # Global radiation (W/m²)
         DGratio = 0.20,  # Ratio of difuse and global radiation (dimensionless)
         #Tob = Tob_VP_result['Tob'],  # Surface temperature (°C)
-        ltf = 4.0,  # Linke tuwrbidity (dimensionless)
+        ltf = 4.0,  # Linke tuwrbidityss (dimensionless)
         alb = 0.1,  # Albedo of the surrounding (dimensionless)
         albhum = 0.3,  # Albedo of the human being (dimensionless)
         RedGChk = False,  # Reduction of G presetting by obstacles in boolean
