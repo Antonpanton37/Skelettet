@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify ## denna används ej nu, prel för rasp
 from flask_cors import CORS
 import os
 import requests
