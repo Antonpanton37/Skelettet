@@ -52,18 +52,6 @@ export default function InformationCarousel() {
           →
         </button>
       </div>
-
-      {/* Prickar som indikerar aktiv slide */}
-      <div className=" bg-red-100 mt-4 flex justify-center gap-2">
-        {slides.map((_, i) => (
-          <span
-            key={i}
-            className={`h-3 w-3 rounded-full ${
-              i === index ? 'bg-black-700' : 'bg-black-400'
-            } inline-block`}
-          />
-        ))}
-      </div>
     </div>
   );
 }
