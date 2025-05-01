@@ -31,9 +31,21 @@ export default function InformationCarousel() {
       <h2 className="text-xl font-semibold mb-2">{title}</h2>
       <p className="mb-6 text-base leading-relaxed">{content}</p>
 
-      <div className="flex justify-center gap-4">
-        <button onClick={prev} className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Föregående</button>
-        <button onClick={next} className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Nästa</button>
+      <div className="flex justify-center gap-6 items-center">
+        <button
+          onClick={prev}
+          className="text-2xl px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+          aria-label="Föregående"
+        >
+          ←
+        </button>
+        <button
+          onClick={next}
+          className="text-2xl px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+          aria-label="Nästa"
+        >
+          →
+        </button>
       </div>
 
       <div className="mt-4 text-sm text-gray-500">
