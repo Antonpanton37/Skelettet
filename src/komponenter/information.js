@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+import './information.css';
 import React, { useState } from 'react';
 
 const slides = [
