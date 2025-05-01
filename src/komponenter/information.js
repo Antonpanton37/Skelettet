@@ -25,13 +25,12 @@ export default function InformationCarousel() {
   const { title, content } = slides[index];
 
   return (
-    <div id="contact" className="section bg-blue-100 rounded-3xl px-6 py-10 text-center max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Genrella råd</h1>
-      {/* Extra text under huvudrubrik */}
-       <p className="mb-6 text-base text-gray-700">
-       Physiological Equivalent Temperature (PET) är ett biometerologiskt index som beskriver hur kroppen upplever temperatur baserat på väderförhållanden. Utöver luftens temperatur inverkar omständigheter som luftfuktighet, vindhastighet och molnighet på hur intensivt värme upplevs. PET på denna webbplats föreställer den lufttemperatur inomhus (utan vind och solstrålning), som motsvarar kroppens värmebalans vid löpning i värme.
-      Exempelvis: PET 27°C motsvarar upplevelsen av att sitta i ett rum, utan vind och strålning, där lufttemperaturen är 27°C.
+    <div id="contact" className="section bg-blue-100 rounded-3xl px-6 py-10 text-center max-w-xl mx-auto">
+      <h1 className="text-2xl font-bold mb-6">Generella råd</h1>
 
+      <p className="max-w-xl mb-6 text-base text-gray-700">
+        Physiological Equivalent Temperature (PET) är ett biometerologiskt index som beskriver hur kroppen upplever temperatur baserat på väderförhållanden. Utöver luftens temperatur inverkar omständigheter som luftfuktighet, vindhastighet och molnighet på hur intensivt värme upplevs. PET på denna webbplats föreställer den lufttemperatur inomhus (utan vind och solstrålning), som motsvarar kroppens värmebalans vid löpning i värme.
+        Exempelvis: PET 27°C motsvarar upplevelsen av att sitta i ett rum, utan vind och strålning, där lufttemperaturen är 27°C.
       </p>
 
       <h2 className="text-xl font-semibold mb-2">{title}</h2>
@@ -54,8 +53,16 @@ export default function InformationCarousel() {
         </button>
       </div>
 
-      <div className="mt-4 text-sm text-gray-500">
-        {index + 1} / {slides.length}
+      {/* Prickar som indikerar aktiv slide */}
+      <div className="mt-4 flex justify-center gap-2">
+        {slides.map((_, i) => (
+          <span
+            key={i}
+            className={`h-2 w-2 rounded-full ${
+              i === index ? 'bg-gray-700' : 'bg-gray-400'
+            } inline-block`}
+          />
+        ))}
       </div>
     </div>
   );
