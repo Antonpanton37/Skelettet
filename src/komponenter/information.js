@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './information.css';
-import React, { useState } from 'react';
+
 
 const slides = [
   {
@@ -26,7 +26,7 @@ export default function InfoCarousel() {
   const { title, text } = slides[index];
 
   return (
-    <div className="w-full max-w-md mx-auto p-4 bg-white rounded-xl shadow-md text-center">
+    <div id="contact" className="w-full max-w-md mx-auto p-4 bg-white rounded-xl shadow-md text-center">
       <h2 className="text-lg sm:text-xl font-semibold mb-2">{title}</h2>
       <p className="text-sm sm:text-base mb-4">{text}</p>
       <div className="flex justify-between">
