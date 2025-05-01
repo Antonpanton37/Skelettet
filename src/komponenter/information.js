@@ -54,12 +54,12 @@ export default function InformationCarousel() {
       </div>
 
       {/* Prickar som indikerar aktiv slide */}
-      <div className="mt-4 flex justify-center gap-2">
+      <div className=" bg-red-100 mt-4 flex justify-center gap-2">
         {slides.map((_, i) => (
           <span
             key={i}
-            className={`h-2 w-2 rounded-full ${
-              i === index ? 'bg-red-700' : 'bg-red-400'
+            className={`h-3 w-3 rounded-full ${
+              i === index ? 'bg-black-700' : 'bg-black-400'
             } inline-block`}
           />
         ))}
