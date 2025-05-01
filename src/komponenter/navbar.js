@@ -59,11 +59,7 @@ function Navbar() {
                   Om oss
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link to="rad" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
-                  Råd
-                </Link>
-              </li>
+           
             </ul>
             </div>
         </div>

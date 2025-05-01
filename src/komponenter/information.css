@@ -1,90 +1,37 @@
-.subheadings {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  justify-content: space-between;
-  text-align: center;
-  position: relative;
-  align-items: stretch; /* Viktigt! Sträcker ut alla kolumner lika mycket */
-}
-
-.subheading-container {
-  flex: 1;
-  padding: 0 20px;
-  position: relative; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.pet-description {
+  max-width: 1000px;
   text-align: justify;
-  
+
 }
 
-.subheading-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1.5px;
-  height: 100%; /* Ändrat från en fast höjd till 100% av förälderns höjd */
-  background-color: black;
+.karusell {
+  max-width: 1000px;
+  margin-top: 90px;
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 16px;
+  padding: 15px;
+  padding-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
+}
+.titel-text {
+  text-align: center;
+
+
 }
 
-.subheading-container:first-child::before {
-  display: none;
+.content-text {
+  max-width: 900px;
+  text-align: justify;
+
+  margin: 0 auto;
+
 }
 
-/* Om du vill ha en minsta höjd på alla boxar för att säkerställa att de inte blir för korta */
-.subheading-container {
-  min-height: 300px; /* Justera detta värde efter behov */
-}
-.image-container {
-  display: flex;
-  justify-content: center; /* Centrerar bilden horisontellt */
-  margin-top: 30px; /* Avstånd från texten */
+.button-row{
+  margin-top: 20px;
+
 }
 
-
-
-@media (max-width: 768px) {
-  .subheadings {
-    flex-direction: column; /* Byt från rad till kolumn */
-    align-items: center;  /* Ceddddssntrerar texten */
-  }
-
-  .subheading-container {
-    width: 100%; /* Låt varje container ta upp hela bredden */
-    padding: 25px 25px;
-    margin-bottom: 5px; /* Minska padding för att spara plats */
-    text-align: center; 
-    min-height: 100px; 
-  }
-  .subheading {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-  }
-  .read-more-hint {
-    font-size: 0.85rem;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 1px;
-  }
-  .subheading-container::before {
-    display: none; /* Ta bort linjerna mellan boxarna på mobil */
-  }
-
-  .subtext {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    
-  }
-
-  .subtext.visible {
-    max-height: 1000px; /* tillräckligt stort värde för att rymma texten */
-    transition: max-height 0.5s ease;
-  }
-
-  .subheading-container.clickable {
-    cursor: pointer;
-  }
-}

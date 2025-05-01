@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import './information.css'; // Behåll om du har generell stil här
 
 const slides = [
@@ -27,30 +28,34 @@ export default function InformationCarousel() {
   return (
     <div id="contact" className="section bg-blue-100 rounded-3xl px-6 py-10 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold text-center mb-6">Generella råd</h1>
+      <h2 className="text-2xl font-bold text-center mb-6"> Vad är PET?</h2>
 
-      <p className="max-w-sm mx-auto mb-6 text-base text-gray-700 text-left">
+
+      <p className="pet-description">
         Physiological Equivalent Temperature (PET) är ett biometerologiskt index som beskriver hur kroppen upplever temperatur baserat på väderförhållanden. Utöver luftens temperatur inverkar omständigheter som luftfuktighet, vindhastighet och molnighet på hur intensivt värme upplevs. PET på denna webbplats föreställer den lufttemperatur inomhus (utan vind och solstrålning), som motsvarar kroppens värmebalans vid löpning i värme.
         Exempelvis: PET 27°C motsvarar upplevelsen av att sitta i ett rum, utan vind och strålning, där lufttemperaturen är 27°C.
       </p>
 
-      <div className="bg-white p-6 rounded-xl shadow-lg max-w-sm mx-auto mb-6">
-        <h2 className="text-xl font-bold mb-3 text-gray-800 text-center">{title}</h2>
-        <p className="text-base text-gray-700 leading-relaxed text-left">{content}</p>
+      <div className="karusell">
+        <h2 className="titel-text">{title}</h2>
+        <p className="content-text">{content}</p>
+
+
       </div>
 
-      <div className="flex justify-center gap-6 items-center">
-        <button
-          onClick={prev}
-          className="text-2xl px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-        >
-          ←
-        </button>
-        <button
-          onClick={next}
-          className="text-2xl px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-        >
-          →
-        </button>
+      <div className=" button-row flex justify-center gap-6 items-center">
+            <button
+        onClick={prev}
+        className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 shadow transition"
+      >
+        <FiArrowLeft size={24} />
+      </button>
+      <button
+        onClick={next}
+        className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 shadow transition"
+      >
+        <FiArrowRight size={24} />
+      </button>
       </div>
     </div>
   );
