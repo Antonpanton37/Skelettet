@@ -42,7 +42,7 @@ const RunningCalculator = () => {
 			const responseData = await response.json();
 			setResult(responseData.result);
 			setHasResult(true);
-
+			
 			if (responseData.result < 10) {
 				setAdvice("Det är svalt ute – klä dig varmt när du springer.");
 			} else if (responseData.result >= 10 && responseData.result <= 18) {
@@ -87,13 +87,13 @@ const RunningCalculator = () => {
 
 	return (
 		<div id="calculator" className="section">
-			<h1>Kalkylator</h1>
-			<p className="calculator-subtitle">Här kan du beräkna ditt PET-värde och få tillhörande råd.</p>
+			<h1>Hur känns vädret egentligen - enligt din kropp?</h1>
+			<p className="calculator-subtitle">Här kan du beräkna ditt PET-värde - hur vädret känns för din kropp - och få personliga råd.</p>
 
 			<div className="calculator-container">
 				<div className="calculator-content">
 					<form className="calculator-box" onSubmit={handleSubmit}>
-						<h2 className="calculator-title">PET Calculator</h2>
+						<h2 className="calculator-title">PET-kalkylator</h2>
 
 						<label>Ålder:</label>
 						<input
@@ -134,7 +134,7 @@ const RunningCalculator = () => {
 							onChange={(e) => setLocation(e.target.value)}
 						/>
 
-						<label>Pace (min/km): {pace}</label>
+						<label> Längd i meter): {pace}</label>
 						<input
 							type="range"
 							min="1"
@@ -154,10 +154,10 @@ const RunningCalculator = () => {
 						<h3>Ditt beräknade resultat:</h3>
 						{result !== null ? (
 							<>
-								<p><strong>PET-temperatur:</strong> {result.toFixed(1)}</p>
+								<p><strong> Dagens högsta PET-temperatur:</strong> {result.toFixed(1)}°C </p>
 								{forecast.length > 0 && (
 									<p>
-										<strong>Högsta temp i {location}:</strong> {forecast[0].temp}°C kl {forecast[0].time}{" "}
+										<strong> Dagens högsta lufttemperatur i {location}:</strong> {forecast[0].temp}°C kl {forecast[0].time}{" "}
 										{forecast[0].icon && (
 											<img
 												src={forecast[0].icon}
