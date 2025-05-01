@@ -59,7 +59,7 @@ export default function InformationCarousel() {
           <span
             key={i}
             className={`h-2 w-2 rounded-full ${
-              i === index ? 'bg-gray-700' : 'bg-gray-400'
+              i === index ? 'bg-red-700' : 'bg-red-400'
             } inline-block`}
           />
         ))}
