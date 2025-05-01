@@ -40,14 +40,14 @@ export default function InformationCarousel() {
         <button
           onClick={prev}
           className="text-2xl px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-          aria-label="Föregående"
+        
         >
           ←
         </button>
         <button
           onClick={next}
           className="text-2xl px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-          aria-label="Nästa"
+        
         >
           →
         </button>
