@@ -28,7 +28,7 @@ export default function InformationCarousel() {
     <div id="contact" className="section bg-blue-100 rounded-3xl px-6 py-10 text-center max-w-xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">Generella råd</h1>
 
-      <p className="max-w-xl mb-6 text-base text-gray-700">
+      <p className="max-w-lg mb-6 text-base text-gray-700">
         Physiological Equivalent Temperature (PET) är ett biometerologiskt index som beskriver hur kroppen upplever temperatur baserat på väderförhållanden. Utöver luftens temperatur inverkar omständigheter som luftfuktighet, vindhastighet och molnighet på hur intensivt värme upplevs. PET på denna webbplats föreställer den lufttemperatur inomhus (utan vind och solstrålning), som motsvarar kroppens värmebalans vid löpning i värme.
         Exempelvis: PET 27°C motsvarar upplevelsen av att sitta i ett rum, utan vind och strålning, där lufttemperaturen är 27°C.
       </p>
