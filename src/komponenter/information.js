@@ -1,49 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import './information.css';
-
+import React, { useState } from 'react';
+import './information.css'; // Behåll om du har generell stil här
 
 const slides = [
   {
     title: 'PET-värde',
-    text: 'PET-skalan är snarlik den allmänna celsiusskalan, men baseras på flera olika meteorologiska mått som lufttemperatur, vindhastighet, lufttryck och luftfuktighet. Därmed modellerar PET olika väderförhållandens effekt på den faktiska temperatur som påverkar kroppens fysiologiska funktioner.'
+    content: `PET-skalan är snarlik den allmänna celsiusskalan, men baseras på flera olika meteorologiska mått som lufttemperatur, vindhastighet, lufttryck och luftfuktighet. Därmed modellerar PET olika väderförhållandens effekt på den faktiska temperatur som påverkar kroppens fysiologiska funktioner.`
   },
   {
     title: 'Ansträngningsutlöst kollaps',
-    text: 'Antalet kollapsande deltagare under ett lopp kan inte endast tillskrivas väderförhållanden, utan även löparens erfarenhet, inställning och förberedelse spelar in. Studier visar att tävlingslöpare har bättre förmåga att anpassa sin hastighet för att justera kroppens värmebalans.'
+    content: `Antalet kollapsande deltagare under ett lopp kan dock inte endast tillskrivas väderförhållanden, utan även löparens erfarenhet, inställning och förberedelse spelar in. Studier visar exempelvis att tävlingslöpare har en bättre förmåga att anpassa sin hastighet för att justera kroppens värmebalans.`
   },
   {
     title: 'Syftet med informationen',
-    text: 'Vårt mål är att öka kunskapen om hur väderförhållanden påverkar fysisk prestation och hälsorisker vid löpning, och därmed minska medicinska incidenter samt förbättra upplevelsen för alla deltagare.'
+    content: `Vårt mål är att öka kunskapen om hur väderförhållanden påverkar fysisk prestation och hälsorisker vid löpning, och därmed minska medicinska incidenter samt förbättra upplevelsen för alla deltagare.`
   }
 ];
 
-export default function InfoCarousel() {
+export default function InformationCarousel() {
   const [index, setIndex] = useState(0);
 
   const next = () => setIndex((prev) => (prev + 1) % slides.length);
   const prev = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
-  const { title, text } = slides[index];
+  const { title, content } = slides[index];
 
   return (
-    <div id="contact" className="w-full max-w-md mx-auto p-4 bg-white rounded-xl shadow-md text-center">
-      <h2 className="text-lg sm:text-xl font-semibold mb-2">{title}</h2>
-      <p className="text-sm sm:text-base mb-4">{text}</p>
-      <div className="flex justify-between">
-        <button
-          onClick={prev}
-          className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition"
-        >
-          Föregående
-        </button>
-        <button
-          onClick={next}
-          className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition"
-        >
-          Nästa
-        </button>
+    <div id="contact" className="section bg-blue-100 rounded-3xl px-6 py-10 text-center max-w-2xl mx-auto">
+      <h1 className="text-2xl font-bold mb-6">Information</h1>
+
+      <h2 className="text-xl font-semibold mb-2">{title}</h2>
+      <p className="mb-6 text-base leading-relaxed">{content}</p>
+
+      <div className="flex justify-center gap-4">
+        <button onClick={prev} className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Föregående</button>
+        <button onClick={next} className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">Nästa</button>
       </div>
-      <div className="mt-2 text-sm text-gray-500">
+
+      <div className="mt-4 text-sm text-gray-500">
         {index + 1} / {slides.length}
       </div>
     </div>
