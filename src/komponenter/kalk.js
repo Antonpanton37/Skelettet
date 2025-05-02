@@ -170,10 +170,10 @@ const RunningCalculator = () => {
                     {/*Resultat*/}
 					<div className="calculator-result">
 						<h3>Ditt beräknade resultat:</h3>
-						<h4>Dagens högsta värden presenteras:</h4>
+						
 						
 						{result !== null ? (
-							<>
+							<>	<h4>Dagens högsta värden presenteras:</h4>
 								<p><strong>PET-temperatur:</strong> {result.toFixed(1)}°C </p>
 								{forecast.length > 0 && (
 									<p>
