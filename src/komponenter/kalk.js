@@ -6,7 +6,7 @@ const RunningCalculator = () => {
 	const [gender, setGender] = useState('');
 	const [weight, setWeight] = useState('');
 	const [location, setLocation] = useState('');
-	const [pace, setPace] = useState(2.20);
+	const [pace, setPace] = useState(0);
 	const [result, setResult] = useState(null);
 	const [hasResult, setHasResult] = useState(false);
 	const [forecast, setForecast] = useState([]);
@@ -156,7 +156,7 @@ const RunningCalculator = () => {
 						<input
 							type="range"
 							min="1"
-							max="3"
+							max="2.20"
 							step="0.01"
 							value={pace}
 							className="calculator-slider"
