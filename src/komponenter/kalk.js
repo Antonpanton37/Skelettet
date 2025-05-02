@@ -105,7 +105,7 @@ const RunningCalculator = () => {
 
 	return (
 		<div id="calculator" className="section">
-			<h1>Hur känns vädret egentligen - enligt din kropp?</h1>
+			<h1>Vilken temperatur upplever din kropp från de rådande väderförhållandena?</h1>
 			<p className="calculator-subtitle">Här kan du beräkna ditt PET-värde - hur vädret känns för din kropp - och få personliga råd.</p>
 
 			<div className="calculator-container">
