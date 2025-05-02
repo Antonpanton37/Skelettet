@@ -170,12 +170,14 @@ const RunningCalculator = () => {
                     {/*Resultat*/}
 					<div className="calculator-result">
 						<h3>Ditt beräknade resultat:</h3>
+						<h4>Dagens högsta värden presenteras:</h4>
+						
 						{result !== null ? (
 							<>
-								<p><strong> Dagens högsta PET-temperatur:</strong> {result.toFixed(1)}°C </p>
+								<p><strong>PET-temperatur:</strong> {result.toFixed(1)}°C </p>
 								{forecast.length > 0 && (
 									<p>
-										<strong> Dagens högsta lufttemperatur i {location}:</strong> {forecast[0].temp}°C kl {forecast[0].time}{" "}
+										<strong>Lufttemperatur i {location}:</strong> {forecast[0].temp}°C kl {forecast[0].time}{" "}
 										{forecast[0].icon && (
 											<img
 												src={forecast[0].icon}
