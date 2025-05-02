@@ -46,12 +46,12 @@ function Navbar() {
               </li> 
               <li className='nav-item'>
                 <Link to="calculator" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
-                  Kalkylator
+                  PET-kalkylator
                 </Link>
               </li>
               <li className='nav-item'>
                 <Link to="contact" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
-                  Information
+                  Generella råd
                 </Link>
               </li>
               <li className='nav-item'>

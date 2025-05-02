@@ -11,6 +11,7 @@ const RunningCalculator = () => {
 	const [hasResult, setHasResult] = useState(false);
 	const [forecast, setForecast] = useState([]);
 	const [advice, setAdvice] = useState('');
+	const [waterIntake, setWaterIntake] = useState(null);
 
 	// Uppdatera slider-fyllning
 	useEffect(() => {
@@ -42,14 +43,31 @@ const RunningCalculator = () => {
 			const responseData = await response.json();
 			setResult(responseData.result);
 			setHasResult(true);
-			
-			if (responseData.result < 10) {
-				setAdvice("Det är svalt ute – klä dig varmt när du springer.");
-			} else if (responseData.result >= 10 && responseData.result <= 18) {
-				setAdvice("Perfekt temperatur för löpning!");
+			if (weight && !isNaN(parseFloat(weight))) {
+                const w = parseFloat(weight);
+                const minWater = (5 * w);
+                const maxWater = (7 * w);
+                const minGlas = (minWater / 200).toFixed(1);
+                const maxGlas = (maxWater / 200).toFixed(1);
+                setWaterIntake({ min: minGlas, max: maxGlas });
+            } else {
+                console.warn("Vikten är ogiltig:", weight);
+            }
+
+			if (responseData.result < 22) {
+				setAdvice("Temperaturen är behaglig och risken för kollaps är låg - spring på som vanligt.");
+			} else if (responseData.result >= 22 && responseData.result <= 28) {
+				setAdvice("Temperaturen är medelhög och medför viss risk för kollaps - spring långsammare än vanligt.");
 			} else {
-				setAdvice("Det är varmt – se till att dricka ordentligt och undvik att springa mitt på dagen.");
+				setAdvice("Temperaturen är hög och risken för kollaps är stor - spring långsamt.");
 			}
+			{waterIntake && (
+				<p><strong>💧 Rekommenderat vätskeintag:</strong> Drick {waterIntake.min}–{waterIntake.max} glas vatten innan din löptur.</p>
+			  )}
+			  
+			  
+
+			  
             {/*API-KEY*/}
 			if (location) {
 				const apiKey = '967994137b684f6c886100836252503';
@@ -134,12 +152,12 @@ const RunningCalculator = () => {
 							onChange={(e) => setLocation(e.target.value)}
 						/>
 
-						<label> Längd i meter): {pace}</label>
+						<label> Längd i meter: {pace}</label>
 						<input
 							type="range"
 							min="1"
-							max="17"
-							step="0.1"
+							max="3"
+							step="0.01"
 							value={pace}
 							className="calculator-slider"
 							onChange={(e) => setPace(e.target.value)}
@@ -171,10 +189,16 @@ const RunningCalculator = () => {
 						) : (
 							<p>-</p>
 						)}
+			
+
                         {/*Råd*/}
 						<div className="calculator-advice">
 							<p>{advice || "Råd kommer att visas här efter beräkning."}</p>
 						</div>
+
+						{waterIntake && (
+  							<p><strong>💧 Rekommenderat vätskeintag:</strong> Drick {waterIntake.min}–{waterIntake.max} glas vatten innan din löptur.</p>
+								)}
 					</div>
 				</div>
 			</div>
