@@ -6,7 +6,7 @@ const RunningCalculator = () => {
 	const [gender, setGender] = useState('');
 	const [weight, setWeight] = useState('');
 	const [location, setLocation] = useState('');
-	const [pace, setPace] = useState(5);
+	const [pace, setPace] = useState(2.20);
 	const [result, setResult] = useState(null);
 	const [hasResult, setHasResult] = useState(false);
 	const [forecast, setForecast] = useState([]);
