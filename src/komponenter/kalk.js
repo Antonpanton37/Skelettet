@@ -6,12 +6,14 @@ const RunningCalculator = () => {
 	const [gender, setGender] = useState('');
 	const [weight, setWeight] = useState('');
 	const [location, setLocation] = useState('');
-	const [pace, setPace] = useState(0);
+	const [pace, setPace] = useState(1.6);
 	const [result, setResult] = useState(null);
 	const [hasResult, setHasResult] = useState(false);
 	const [forecast, setForecast] = useState([]);
 	const [advice, setAdvice] = useState('');
 	const [waterIntake, setWaterIntake] = useState(null);
+	const [loading, setLoading] = useState(false);
+
 
 	// Uppdatera slider-fyllning
 	useEffect(() => {
@@ -25,6 +27,8 @@ const RunningCalculator = () => {
 	}, [pace]);
     {/*Hämtar från pythonkoden*/}
 	const handleCalculate = async () => {
+		
+	
 		const data = {
 			age: parseInt(age),
 			gender,
@@ -32,7 +36,7 @@ const RunningCalculator = () => {
 			location,
 			pace: parseFloat(pace),
 		};
-
+		setLoading(true);
 		try {
 			const response = await fetch("https://backend-1-s6ox.onrender.com/calculate", {
 				method: "POST",
@@ -55,7 +59,7 @@ const RunningCalculator = () => {
             }
 
 			if (responseData.result < 22) {
-				setAdvice("Temperaturen är behaglig och risken för kollaps är låg - spring på som vanligt.");
+				setAdvice("Temperaturen är behaglig och risken för kollaps är låg - spring som vanligt.");
 			} else if (responseData.result >= 22 && responseData.result <= 28) {
 				setAdvice("Temperaturen är medelhög och medför viss risk för kollaps - spring långsammare än vanligt.");
 			} else {
@@ -94,8 +98,11 @@ const RunningCalculator = () => {
 			}
 		} catch (error) {
 			console.error("Fel vid beräkning eller hämtning av väder:", error);
+		}finally {
+			setLoading(false);
 		}
 	};
+
 
 	// Hanterar både Enter och knapptryck
 	const handleSubmit = async (e) => {
@@ -152,7 +159,7 @@ const RunningCalculator = () => {
 							onChange={(e) => setLocation(e.target.value)}
 						/>
 
-						<label> Längd i meter: {pace}</label>
+						<label>Längd i meter: {pace}</label>
 						<input
 							type="range"
 							min="1"
@@ -170,14 +177,20 @@ const RunningCalculator = () => {
                     {/*Resultat*/}
 					<div className="calculator-result">
 						<h3>Ditt beräknade resultat:</h3>
-						
+						{loading && 
+							<div className="spinner-container">
+								<div className="spinner"></div>
+							</div>
+							}
+
 						
 						{result !== null ? (
-							<>	<h4>Dagens högsta värden presenteras:</h4>
-								<p><strong>PET-temperatur:</strong> {result.toFixed(1)}°C </p>
+							<>	
+							<strong>Dagens högsta värden presenteras:</strong>
+								<p><p>PET-temperatur:</p> {result.toFixed(1)}°C </p>
 								{forecast.length > 0 && (
 									<p>
-										<strong>Lufttemperatur i {location}:</strong> {forecast[0].temp}°C kl {forecast[0].time}{" "}
+										<p>Lufttemperatur i {location}:</p> {forecast[0].temp}°C kl {forecast[0].time}{" "}
 										{forecast[0].icon && (
 											<img
 												src={forecast[0].icon}
@@ -199,7 +212,7 @@ const RunningCalculator = () => {
 						</div>
 
 						{waterIntake && (
-  							<p><strong>💧 Rekommenderat vätskeintag:</strong> Drick {waterIntake.min}–{waterIntake.max} glas vatten innan din löptur.</p>
+  							<p><strong>💧 Rekommenderat vätskeintag innan löptur:</strong> {waterIntake.min}–{waterIntake.max} glas vatten.</p>
 								)}
 					</div>
 				</div>
