@@ -4,16 +4,28 @@ import './information.css'; // Behåll om du har generell stil här
 
 const slides = [
   {
-    title: 'PET-värde',
-    content: `PET-skalan är snarlik den allmänna celsiusskalan, men baseras på flera olika meteorologiska mått som lufttemperatur, vindhastighet, lufttryck och luftfuktighet. Därmed modellerar PET olika väderförhållandens effekt på den faktiska temperatur som påverkar kroppens fysiologiska funktioner.`
+    title: 'Vätska',
+    content: `Det är mycket viktigt att fylla på kroppens vattennivåer både före, under och efter löpning, särskilt när det är varmt ute och du svettas mycket! Drick hellre mindre mängder ofta än massor på en gång.`
   },
   {
-    title: 'Ansträngningsutlöst kollaps',
-    content: `Antalet kollapsande deltagare under ett lopp kan dock inte endast tillskrivas väderförhållanden, utan även löparens erfarenhet, inställning och förberedelse spelar in. Studier visar exempelvis att tävlingslöpare har en bättre förmåga att anpassa sin hastighet för att justera kroppens värmebalans.`
+    title: 'Salter',
+    content: "Vid hård ansträngning, särskilt i värme, är det lika viktigt att fylla på med salt som med vatten. Salter hjälper kroppen att ta upp och behålla vätska bättre. Du kan exempelvis äta salta snacks eller använda elektrolytlösningar (ex. Resorb) i dricksvattnet."
   },
   {
-    title: 'Syftet med informationen',
-    content: `Vårt mål är att öka kunskapen om hur väderförhållanden påverkar fysisk prestation och hälsorisker vid löpning, och därmed minska medicinska incidenter samt förbättra upplevelsen för alla deltagare.`
+    title: 'Acklimatisering',
+    content: `Genom att gradvis vänja din kropp vid fysisk ansträngning i värme kan du minska riskerna för hälsobesvär och lära dig hur just din kropp reagerar på värme. Ex. kan du utföra löpträning i varm miljö utomhus, eller inomhus i varm lokal eller med varmare kläder. Även passiv exponering genom ex. bastu kan ha viss effekt.`
+  },
+  {
+    title: 'Klädsel',
+    content: `När det är varmt ute bör du välja kläder som tillåter svett att avdunsta - alltså plagg som täcker liten yta och i material som andas. Du måste samtidigt skydda dig mot solens strålning, genom ex. solkräm eller tunna men täckande plagg`
+  },
+  {
+    title: 'Sjukdom',
+    content: `Att träna när du är eller precis har varit sjuk är en dålig idé - sjukdom har signifikant inverkan på kroppens förmåga att reglera vätske- och värmenivåer. Dessutom innebär det ökad risk för hjärtmuskelinflammation.`
+  },
+  {
+    title: 'Sänk farten',
+    content: `Om du löptränar i varmt väder är bland det mest effektiva du kan göra att sänka farten - det minskar signifikant risken för värmerelaterade åkommor som ex. ansträngningsutlöst kollaps.`
   }
 ];
 
@@ -27,15 +39,26 @@ export default function InformationCarousel() {
 
   return (
     <div id="contact" className="section bg-blue-100 rounded-3xl px-6 py-10 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold text-center mb-6">Generella råd</h1>
-      <h2 className="text-2xl font-bold text-center mb-6"> Vad är PET?</h2>
+      <h1 className="text-2xl font-bold text-center mb-6"> Vad är PET?</h1>
+  
 
 
       <p className="pet-description">
-        Physiological Equivalent Temperature (PET) är ett biometerologiskt index som beskriver hur kroppen upplever temperatur baserat på väderförhållanden. Utöver luftens temperatur inverkar omständigheter som luftfuktighet, vindhastighet och molnighet på hur intensivt värme upplevs. PET på denna webbplats föreställer den lufttemperatur inomhus (utan vind och solstrålning), som motsvarar kroppens värmebalans vid löpning i värme.
-        Exempelvis: PET 27°C motsvarar upplevelsen av att sitta i ett rum, utan vind och strålning, där lufttemperaturen är 27°C.
+      Physiological Equivalent Temperature (PET) är ett biometerologiskt index som beskriver hur kroppen upplever temperatur baserat på väderförhållanden. Utöver luftens temperatur inverkar omständigheter som luftfuktighet, vindhastighet och solens strålning på hur intensivt värme upplevs. PET på denna webbplats föreställer den lufttemperatur inomhus (utan vind och solstrålning), som motsvarar kroppens värmebalans vid löpning i värme.
+      
+
       </p>
 
+      <p className="pet-description">
+      
+      Exempelvis: PET 27°C motsvarar för din kropp samma upplevelse som att sitta i ett rum, utan vind och strålning, där lufttemperaturen är 27°C.
+
+      </p>
+      
+      
+
+
+      <h1 className="text-2xl font-bold text-center mb-6">Generella råd</h1>
       <div className="karusell">
         <h2 className="titel-text">{title}</h2>
         <p className="content-text">{content}</p>

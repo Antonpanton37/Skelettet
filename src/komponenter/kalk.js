@@ -59,7 +59,7 @@ const RunningCalculator = () => {
             }
 
 			if (responseData.result < 22) {
-				setAdvice("Temperaturen är behaglig och risken för kollaps är låg - spring som vanligt.");
+				setAdvice("Temperaturen är låg och risken för kollaps är därmed liten - spring som vanligt.");
 			} else if (responseData.result >= 22 && responseData.result <= 28) {
 				setAdvice("Temperaturen är medelhög och medför viss risk för kollaps - spring långsammare än vanligt.");
 			} else {
@@ -113,7 +113,7 @@ const RunningCalculator = () => {
 	return (
 		<div id="calculator" className="section">
 			<h1>Vilken temperatur upplever din kropp från de rådande väderförhållandena?</h1>
-			<p className="calculator-subtitle">Här kan du beräkna ditt PET-värde - hur vädret känns för din kropp - och få personliga råd.</p>
+			<p className="calculator-subtitle">Här kan du beräkna ditt PET-värde och få personliga råd.</p>
 
 			<div className="calculator-container">
 				<div className="calculator-content">
