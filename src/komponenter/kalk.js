@@ -140,11 +140,11 @@ const RunningCalculator = () => {
 							value={weight}
 							onChange={(e) => setWeight(e.target.value)}
 						/>
-						<label>Längd (m): {pace}</label>
+						<label>Längd (m):</label>
 						<input
 							type="number"
 							className="calculator-input"
-							placeholder="Ange din längd i meter"
+							placeholder="Ange din längd"
 							value={pace}
 							step={0.01}
 							onChange={(e) => setPace(e.target.value)}
