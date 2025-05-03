@@ -6,7 +6,7 @@ const RunningCalculator = () => {
 	const [gender, setGender] = useState('');
 	const [weight, setWeight] = useState('');
 	const [location, setLocation] = useState('');
-	const [pace, setPace] = useState(1.6);
+	const [pace, setPace] = useState('');
 	const [result, setResult] = useState(null);
 	const [hasResult, setHasResult] = useState(false);
 	const [forecast, setForecast] = useState([]);
@@ -15,16 +15,7 @@ const RunningCalculator = () => {
 	const [loading, setLoading] = useState(false);
 
 
-	// Uppdatera slider-fyllning
-	useEffect(() => {
-		const slider = document.querySelector(".calculator-slider");
-		if (slider) {
-			const min = slider.min;
-			const max = slider.max;
-			const percentage = ((pace - min) / (max - min)) * 100;
-			slider.style.background = `linear-gradient(to right, black 0%, black ${percentage}%, white ${percentage}%, white 100%)`;
-		}
-	}, [pace]);
+
     {/*Hämtar från pythonkoden*/}
 	const handleCalculate = async () => {
 		
@@ -149,6 +140,15 @@ const RunningCalculator = () => {
 							value={weight}
 							onChange={(e) => setWeight(e.target.value)}
 						/>
+						<label>Längd (m): {pace}</label>
+						<input
+							type="number"
+							className="calculator-input"
+							placeholder="Ange din längd i meter"
+							value={pace}
+							step={0.01}
+							onChange={(e) => setPace(e.target.value)}
+						/>
 
 						<label>Plats:</label>
 						<input
@@ -159,16 +159,7 @@ const RunningCalculator = () => {
 							onChange={(e) => setLocation(e.target.value)}
 						/>
 
-						<label>Längd i meter: {pace}</label>
-						<input
-							type="range"
-							min="1"
-							max="2.20"
-							step="0.01"
-							value={pace}
-							className="calculator-slider"
-							onChange={(e) => setPace(e.target.value)}
-						/>
+
 
 						<button type="submit" className="calculator-button">
 							Beräkna

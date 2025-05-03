@@ -54,8 +54,12 @@ export default function InformationCarousel() {
       Exempelvis: PET 27°C motsvarar för din kropp samma upplevelse som att sitta i ett rum, utan vind och strålning, där lufttemperaturen är 27°C.
 
       </p>
+
+      <p className="pet-description">
       
-      
+      PET har visat sig korrelera med hur många som drabbas av akuta sjukdomstillstånd under stora löptävlingar som Göteborgsvarvet. Ju högre temperatur din kropp upplever, desto större är risken att du drabbas av tillstånd som ansträngningsutlöst kollaps, värmeslag eller muskelkramp.
+
+      </p>
 
 
       <h1 className="text-2xl font-bold text-center mb-6">Generella råd</h1>

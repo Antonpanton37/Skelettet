@@ -13,7 +13,7 @@ function Omoss() {
           <p>Arbetet grundar sig i vår gemensamma passion för hälsa och rörelse, och idén tog form i samarbete med en läkare, specialist inom akutsjukvård. Genom hans insikter blev det tydligt att många löpare underskattar riskerna som höga temperaturer kan medföra.
 
           </p>
-          <p>Vårt mål är att tillhandahålla relevant, lättillgänglig och forskningsbaserad information som hjälper löpare att fatta informerade beslut och minska risken för kollaps i varmare vädertemperaturer.
+          <p>Vårt mål är att tillhandahålla relevant, lättillgänglig och forskningsbaserad information som hjälper löpare att fatta informerade beslut och minska risken för sjukdomstillstånd i varmare vädertemperaturer.
           </p>
         </div>
         <div className="about-image">
