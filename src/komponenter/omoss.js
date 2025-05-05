@@ -22,9 +22,9 @@ function Omoss() {
       </div>
 
       <div id='bilder' className="image-row">
-        <img src="/nils.jpg" alt="Image 1" className="small-image" />
+        <img src="/DSC03021.jpg" alt="Image 1" className="small-image" />
         <img src="/Tilde.jpg" alt="Image 2" className="small-image" />
-        <img src="/Nils.jpeg" alt="Image 3" className="small-image" />
+        <img src="/löpa.jpg" alt="Image 3" className="small-image" />
         <img src="/tilde.png" alt="Image 4" className="small-image" />
         <video autoPlay loop muted className="small-image">
           <source src="/nils.mp4.mp4" type="video/mp4" />
