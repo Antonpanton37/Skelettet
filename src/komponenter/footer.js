@@ -14,7 +14,7 @@ function Footer() {
       <h2>Kontakta oss</h2>
       <p>För alla förfrågningar, tveka inte att höra av dig. Vi är alltid på jakt efter kreativa idéer, intressanta samarbetspartners och nya perspektiv.</p>
       <p>Vi är baserade på Chalmers tekniska högskola i Göteborg.</p>
-      <p>info@pacepal.se</p>
+      <p>info@runwise.se</p>
 
     </div>
 
@@ -23,7 +23,7 @@ function Footer() {
     </div>
   </div>
       <div className="footer-bottom">
-        <p>© 2025 PacePal. Alla rättigheter förbehållna.</p>
+        <p>© 2025 RunWise. Alla rättigheter förbehållna.</p>
       </div>
     </footer>
   );
