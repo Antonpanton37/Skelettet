@@ -140,7 +140,7 @@ const RunningCalculator = () => {
 							value={weight}
 							onChange={(e) => setWeight(e.target.value)}
 						/>
-						<label>Längd (m):</label>
+						<label>Längd (cm):</label>
 						<input
 							type="number"
 							className="calculator-input"
