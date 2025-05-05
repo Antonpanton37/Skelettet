@@ -40,24 +40,24 @@ const RunningCalculator = () => {
 			setHasResult(true);
 			if (weight && !isNaN(parseFloat(weight))) {
                 const w = parseFloat(weight);
-                const minWater = (5 * w);
-                const maxWater = (7 * w);
-                const minGlas = (minWater / 200).toFixed(1);
-                const maxGlas = (maxWater / 200).toFixed(1);
+                const minWater = (0.5 * w);
+                const maxWater = (0.7 * w);
+                const minGlas = (minWater).toFixed(1);
+                const maxGlas = (maxWater).toFixed(1);
                 setWaterIntake({ min: minGlas, max: maxGlas });
             } else {
                 console.warn("Vikten är ogiltig:", weight);
             }
 
 			if (responseData.result < 22) {
-				setAdvice("Temperaturen är låg och risken för kollaps är därmed liten - spring som vanligt.");
+				setAdvice("PET är lågt och risken för kollaps är därmed liten - spring som vanligt.");
 			} else if (responseData.result >= 22 && responseData.result <= 28) {
-				setAdvice("Temperaturen är medelhög och medför viss risk för kollaps - spring långsammare än vanligt.");
+				setAdvice("PET är medelhögt och medför viss risk för kollaps - spring långsammare än vanligt.");
 			} else {
-				setAdvice("Temperaturen är hög och risken för kollaps är stor - spring långsamt.");
+				setAdvice("PET är högt och risken för kollaps är stor - spring långsamt.");
 			}
 			{waterIntake && (
-				<p><strong>💧 Rekommenderat vätskeintag:</strong> Drick {waterIntake.min}–{waterIntake.max} glas vatten innan din löptur.</p>
+				<p><strong>💧 Rekommenderat vätskeintag:</strong> Drick {waterIntake.min}–{waterIntake.max} dl vatten innan din löptur.</p>
 			  )}
 			  
 			  
