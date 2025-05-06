@@ -9,17 +9,18 @@ const RunningCalculator = () => {
 	const [pace, setPace] = useState('');
 	const [result, setResult] = useState(null);
 	const [hasResult, setHasResult] = useState(false);
+	const [temp, setTemp] = useState(null);      // ✅ Lägg till denna
+	const [time, setTime] = useState(null);
 	const [forecast, setForecast] = useState([]);
 	const [advice, setAdvice] = useState('');
 	const [waterIntake, setWaterIntake] = useState(null);
 	const [loading, setLoading] = useState(false);
+	const [icon, setIcon] = useState(null);
 
 
 
     {/*Hämtar från pythonkoden*/}
 	const handleCalculate = async () => {
-		
-	
 		const data = {
 			age: parseInt(age),
 			gender,
@@ -27,28 +28,48 @@ const RunningCalculator = () => {
 			location,
 			pace: parseFloat(pace),
 		};
+	
 		setLoading(true);
+	
 		try {
 			const response = await fetch("https://backend-1-s6ox.onrender.com/calculate", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(data),
 			});
-
+	
 			const responseData = await response.json();
+	
+			// Hämta värden från backend
 			setResult(responseData.result);
+			setTemp(responseData.temp);
+			setTime(responseData.time);
+			setIcon(responseData.icon);
+	
+			// Om du returnerar max_temp också:
+			if (responseData.max_temp) {
+				setForecast([{
+					time: responseData.max_temp.time?.split(' ')[1] || '',
+					temp: responseData.max_temp.temp,
+					icon: responseData.max_temp.icon || ''
+				}]);
+			} else {
+				setForecast([]);
+			}
+	
 			setHasResult(true);
+	
+			// Vätskeintag
 			if (weight && !isNaN(parseFloat(weight))) {
-                const w = parseFloat(weight);
-                const minWater = (0.5 * w);
-                const maxWater = (0.7 * w);
-                const minGlas = (minWater).toFixed(1);
-                const maxGlas = (maxWater).toFixed(1);
-                setWaterIntake({ min: minGlas, max: maxGlas });
-            } else {
-                console.warn("Vikten är ogiltig:", weight);
-            }
-
+				const w = parseFloat(weight);
+				const minWater = (0.5 * w).toFixed(1);
+				const maxWater = (0.7 * w).toFixed(1);
+				setWaterIntake({ min: minWater, max: maxWater });
+			} else {
+				console.warn("Vikten är ogiltig:", weight);
+			}
+	
+			// Råd baserat på PET
 			if (responseData.result < 22) {
 				setAdvice("PET är lågt och risken för kollaps är därmed liten - spring som vanligt.");
 			} else if (responseData.result >= 22 && responseData.result <= 28) {
@@ -56,44 +77,13 @@ const RunningCalculator = () => {
 			} else {
 				setAdvice("PET är högt och risken för kollaps är stor - spring långsamt.");
 			}
-			{waterIntake && (
-				<p><strong>💧 Rekommenderat vätskeintag:</strong> Drick {waterIntake.min}–{waterIntake.max} dl vatten innan din löptur.</p>
-			  )}
-			  
-			  
-
-			  
-            {/*API-KEY*/}
-			if (location) {
-				const apiKey = '967994137b684f6c886100836252503';
-				const weatherResponse = await fetch(
-					`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&lang=sv&days=1`
-				);
-				const weatherData = await weatherResponse.json();
-
-				if (weatherData && weatherData.forecast) {
-					const forecastHours = weatherData.forecast.forecastday[0].hour;
-
-					const maxTempHour = forecastHours.reduce((max, hour) =>
-						hour.temp_c > max.temp_c ? hour : max
-					, forecastHours[0]);
-
-					setForecast([{
-						time: maxTempHour.time.split(' ')[1],
-						temp: maxTempHour.temp_c,
-						icon: maxTempHour.condition.icon
-					}]);
-				} else {
-					setForecast([]);
-				}
-			}
 		} catch (error) {
-			console.error("Fel vid beräkning eller hämtning av väder:", error);
-		}finally {
+			console.error("Fel vid beräkning:", error);
+		} finally {
 			setLoading(false);
 		}
 	};
-
+	
 
 	// Hanterar både Enter och knapptryck
 	const handleSubmit = async (e) => {
@@ -179,18 +169,18 @@ const RunningCalculator = () => {
 							<>	
 							<strong>Dagens högsta värden presenteras:</strong>
 								<p><p>PET-temperatur:</p> {result.toFixed(1)}°C </p>
-								{forecast.length > 0 && (
+								
 									<p>
-										<p>Lufttemperatur i {location}:</p> {forecast[0].temp}°C kl {forecast[0].time}{" "}
-										{forecast[0].icon && (
+										<p>Lufttemperatur i {location}:</p> {temp}°C kl {time}{" "}
+										{icon && (
 											<img
-												src={forecast[0].icon}
+												src={icon}
 												alt="väder"
 												style={{ width: "32px", verticalAlign: "middle" }}
 											/>
 										)}
 									</p>
-								)}
+								
 							</>
 						) : (
 							<p>-</p>
