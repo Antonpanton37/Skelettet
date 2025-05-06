@@ -171,7 +171,7 @@ const RunningCalculator = () => {
 							{result >= 17 ? (
       							<p><p>PET-temperatur:</p> {result.toFixed(1)}°C </p>
    								 ) : (
-      							<p><em>För låg PET för att generera godtyckligt resultat.</em></p>
+      							<p><em>Lufttemperaturen är för låg för att ge ett väsentligt PET</em></p>
 )}
 									<p>
 										<p>Lufttemperatur i {location}:</p> {temp}°C kl {time}{" "}
