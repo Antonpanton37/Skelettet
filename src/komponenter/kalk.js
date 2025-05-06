@@ -119,7 +119,7 @@ const RunningCalculator = () => {
 							<option value="">Välj</option>
 							<option value="male">Man</option>
 							<option value="female">Kvinna</option>
-							<option value="other">Annat</option>
+					
 						</select>
 
 						<label>Vikt (kg):</label>
