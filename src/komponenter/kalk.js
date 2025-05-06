@@ -167,7 +167,7 @@ const RunningCalculator = () => {
 						
 						{result !== null ? (
 							<>	
-							<strong>Dagens högsta värden presenteras:</strong>
+							<strong>Dagens kommande högsta värden presenteras:</strong>
 							{result >= 17 ? (
       							<p><p>PET-temperatur:</p> {result.toFixed(1)}°C </p>
    								 ) : (
