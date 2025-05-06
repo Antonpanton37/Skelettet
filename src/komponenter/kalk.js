@@ -62,8 +62,8 @@ const RunningCalculator = () => {
 			// Vätskeintag
 			if (weight && !isNaN(parseFloat(weight))) {
 				const w = parseFloat(weight);
-				const minWater = (0.5 * w).toFixed(1);
-				const maxWater = (0.7 * w).toFixed(1);
+				const minWater = (0.05 * w).toFixed(1); 
+				const maxWater = (0.07 * w).toFixed(1);
 				setWaterIntake({ min: minWater, max: maxWater });
 			} else {
 				console.warn("Vikten är ogiltig:", weight);
@@ -168,8 +168,11 @@ const RunningCalculator = () => {
 						{result !== null ? (
 							<>	
 							<strong>Dagens högsta värden presenteras:</strong>
-								<p><p>PET-temperatur:</p> {result.toFixed(1)}°C </p>
-								
+							{result >= 17 ? (
+      							<p><p>PET-temperatur:</p> {result.toFixed(1)}°C </p>
+   								 ) : (
+      							<p><em>För låg PET för att generera godtyckligt resultat.</em></p>
+)}
 									<p>
 										<p>Lufttemperatur i {location}:</p> {temp}°C kl {time}{" "}
 										{icon && (
@@ -193,7 +196,7 @@ const RunningCalculator = () => {
 						</div>
 
 						{waterIntake && (
-  							<p><strong>💧 Rekommenderat vätskeintag innan löptur:</strong> {waterIntake.min}–{waterIntake.max} glas vatten.</p>
+  							<p><strong>💧 Rekommenderat vätskeintag innan löptur:</strong> {waterIntake.min}–{waterIntake.max} dl vatten.</p>
 								)}
 					</div>
 				</div>
