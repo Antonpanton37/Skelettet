@@ -30,7 +30,7 @@ const RunningCalculator = () => {
 		};
 	
 		setLoading(true);
-	
+		const start = performance.now(); 
 		try {
 			const response = await fetch("https://backend-1-s6ox.onrender.com/calculate", {
 				method: "POST",
@@ -39,7 +39,9 @@ const RunningCalculator = () => {
 			});
 	
 			const responseData = await response.json();
-	
+			const end = performance.now();
+			
+			console.log(`📡 Total svarstid: ${(end - start).toFixed(2)} ms`);
 			// Hämta värden från backend
 			setResult(responseData.result);
 			setTemp(responseData.temp);
