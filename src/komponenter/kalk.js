@@ -40,7 +40,7 @@ const RunningCalculator = () => {
 	
 			const responseData = await response.json();
 			const end = performance.now();
-			
+
 			console.log(`📡 Total svarstid: ${(end - start).toFixed(2)} ms`);
 			// Hämta värden från backend
 			setResult(responseData.result);
@@ -159,7 +159,7 @@ const RunningCalculator = () => {
 					</form>
                     {/*Resultat*/}
 					<div className="calculator-result">
-						<h3>Ditt beräknade resultat:</h3>
+						<h3>Dagens kommande högsta värden presenteras:</h3>
 						{loading && 
 							<div className="spinner-container">
 								<div className="spinner"></div>
@@ -169,7 +169,7 @@ const RunningCalculator = () => {
 						
 						{result !== null ? (
 							<>	
-							<strong>Dagens kommande högsta värden presenteras:</strong>
+							
 							{result >= 10 ? (
       							<p><p>PET-värde:</p> {result.toFixed(1)}°C </p>
    								 ) : (
