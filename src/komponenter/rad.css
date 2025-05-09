@@ -8,3 +8,11 @@
   .reference-list li {
     margin-bottom: 0.5rem;
   }
+  .thank-you-text {
+    font-size: 1.2rem; 
+    font-style: italic; 
+    color: #555; 
+    margin-top: 20px;  
+    text-align: center; 
+  }
+  
