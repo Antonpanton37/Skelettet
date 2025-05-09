@@ -59,6 +59,11 @@ function Navbar() {
                   Om oss
                 </Link>
               </li>
+              <li className='nav-item'>
+                <Link to="rad" smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
+                  Litteratur
+                </Link>
+              </li>
            
             </ul>
             </div>

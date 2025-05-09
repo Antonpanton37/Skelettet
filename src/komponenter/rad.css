@@ -1,0 +1,10 @@
+.reference-list {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .reference-list li {
+    margin-bottom: 0.5rem;
+  }
