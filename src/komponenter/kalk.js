@@ -73,11 +73,11 @@ const RunningCalculator = () => {
 	
 			// Råd baserat på PET
 			if (responseData.result < 22) {
-				setAdvice("🏃‍♂️‍➡️ PET är lågt och risken för värmeutlöstkollaps är därmed liten - spring som vanligt.");
+				setAdvice("🏃‍♂️‍➡️ PET är lågt och risken för värmeutlöst kollaps är därmed liten - spring som vanligt.");
 			} else if (responseData.result >= 22 && responseData.result <= 28) {
-				setAdvice("🏃‍♂️‍➡️ PET är medelhögt och medför viss risk för värmeutlöstkollaps - spring långsammare än vanligt.");
+				setAdvice("🏃‍♂️‍➡️ PET är medelhögt och medför viss risk för värmeutlöst kollaps - spring långsammare än vanligt.");
 			} else {
-				setAdvice("🏃‍♂️‍➡️ PET är högt och risken för värmeutlöstkollaps är stor - spring långsamt.");
+				setAdvice("🏃‍♂️‍➡️ PET är högt och risken för värmeutlöst kollaps är stor - spring långsamt.");
 			}
 		} catch (error) {
 			console.error("Fel vid beräkning:", error);
