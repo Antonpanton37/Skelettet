@@ -207,7 +207,7 @@ const RunningCalculator = () => {
 				className="extra-info"
 				style={{
 				textAlign: 'center',
-				marginTop: '1rem',
+				marginTop: '2rem',
 				fontStyle: 'italic',
 				fontSize: '0.9rem',
 				color: '#555',
