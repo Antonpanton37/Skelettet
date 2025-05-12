@@ -72,7 +72,7 @@ const RunningCalculator = () => {
 			}
 	
 			// Råd baserat på PET
-			if (responseData.result < 22) {
+			if (responseData.result <= 21) {
 				setAdvice("PET är lågt och risken för kollaps är därmed liten - spring som vanligt.");
 			} else if (responseData.result >= 22 && responseData.result <= 28) {
 				setAdvice("PET är medelhögt och medför viss risk för kollaps - spring långsammare än vanligt.");
