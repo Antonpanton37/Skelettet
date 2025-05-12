@@ -96,7 +96,7 @@ const RunningCalculator = () => {
 	return (
 		<div id="calculator" className="section">
 			<h1>Beräkna ditt PET-värde</h1>
-			<p className="calculator-subtitle">- temperaturen din kropp upplever under rådande väderförhållanden.</p>
+			<p className="calculator-subtitle"><em>- temperaturen din kropp upplever under rådande väderförhållanden</em></p>
 
 			<div className="calculator-container">
 				<div className="calculator-content">
