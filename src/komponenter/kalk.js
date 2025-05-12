@@ -158,6 +158,7 @@ const RunningCalculator = () => {
 						</button>
 					</form>
                     {/*Resultat*/}
+					
 					<div className="calculator-result">
 						<h3>Dagens högsta PET:</h3>
 						{loading && 
@@ -202,6 +203,20 @@ const RunningCalculator = () => {
 								)}
 					</div>
 				</div>
+						<p
+				className="extra-info"
+				style={{
+				textAlign: 'center',
+				marginTop: '1rem',
+				fontStyle: 'italic',
+				fontSize: '0.9rem',
+				color: '#555',
+				}}
+				>
+				❗️ OBS detta är endast råd, vid sjukdom uppsök läkare ❗️
+				</p>
+
+
 			</div>
 		</div>
 	);
