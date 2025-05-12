@@ -95,8 +95,8 @@ const RunningCalculator = () => {
 
 	return (
 		<div id="calculator" className="section">
-			<h1>Vilken temperatur upplever din kropp från de rådande väderförhållandena?</h1>
-			<p className="calculator-subtitle">Här kan du beräkna ditt PET-värde och få personliga råd.</p>
+			<h1>Beräkna ditt PET-värde</h1>
+			<p className="calculator-subtitle">- temperaturen din kropp upplever under rådande väderförhållanden.</p>
 
 			<div className="calculator-container">
 				<div className="calculator-content">
@@ -159,7 +159,7 @@ const RunningCalculator = () => {
 					</form>
                     {/*Resultat*/}
 					<div className="calculator-result">
-						<h3>Dagens kommande högsta värden presenteras:</h3>
+						<h3>Dagens högsta PET:</h3>
 						{loading && 
 							<div className="spinner-container">
 								<div className="spinner"></div>
@@ -171,12 +171,12 @@ const RunningCalculator = () => {
 							<>	
 							
 							{result >= 10 ? (
-      							<p><p>PET-värde:</p> {result.toFixed(1)}°C </p>
+      							<p><p></p> {result.toFixed(1)}°C </p>
    								 ) : (
       							<p><em>Lufttemperaturen är för låg för att ge ett väsentligt PET</em></p>
 )}
 									<p>
-										<p>Lufttemperatur i {location}:</p> {temp}°C kl {time}{" "}
+										<p> inträffar kl kl {time}{" "} i {location}, då lufttemperaturen är {temp}°C:</p> 
 										{icon && (
 											<img
 												src={icon}
@@ -198,7 +198,7 @@ const RunningCalculator = () => {
 						</div>
 
 						{waterIntake && (
-  							<p><strong>💧 Rekommenderat vätskeintag innan löptur:</strong> {waterIntake.min}–{waterIntake.max} dl vatten.</p>
+  							<p><>💧 Rekommenderat vätskeintag innan löptur:</> {waterIntake.min}–{waterIntake.max} dl vatten.</p>
 								)}
 					</div>
 				</div>
