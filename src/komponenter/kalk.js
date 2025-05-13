@@ -207,7 +207,7 @@ const RunningCalculator = () => {
 				color: '#555',
 				}}
 				>
-				❗️ OBS detta är endast råd. Vid sjukdom bör läkare kontaktas för medicinsk bedömning ❗️
+				❗️ Detta är endast råd. Vid sjukdom bör läkare kontaktas för medicinsk bedömning ❗️
 				</p>
 
 				<p
@@ -220,7 +220,7 @@ const RunningCalculator = () => {
 				color: '#555',
 				}}
 				>
-				💨 OBS vid låga vindhastigheter kan PET-värdet mycket högt. Detta på grund av brister i beräkningsmodellen 💨
+				🌪️ OBS vid låga vindhastigheter kan PET-värdet mycket högt. Detta på grund av brister i beräkningsmodellen 🌪️
 				</p>
 
 			</div>
