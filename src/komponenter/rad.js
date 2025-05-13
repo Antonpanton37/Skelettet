@@ -34,10 +34,10 @@ https://doi.org/10.1136/bjsports-2018-099275.
         H. Lüning, privat kommunikation, Feb. 2025.
         </li>
         <p className="thank-you-text">
-        Vi vill rikta ett stort tack till Hampus Lüning för hans stora engagemang och expertis inom området. 
+        Vi vill rikta ett stort tack till Magnus Karlsten, Hampus Lüning och Fredrik Lindberg för deras stora engagemang och expertis inom området. 
       </p>
       <p className="thank-you-text">
-        Vi vill även passa på att tacka Nils Bredin och Tilde Johansson för att vara våra frontfigurer. 
+        Vi vill även passa på att tacka Nils Bredin och Tilde Johansson för att de är våra frontfigurer. 
         </p>
       </ol>
     </div>
