@@ -210,6 +210,18 @@ const RunningCalculator = () => {
 				❗️ OBS detta är endast råd. Vid sjukdom bör läkare kontaktas för medicinsk bedömning ❗️
 				</p>
 
+				<p
+				className="extra-info"
+				style={{
+				textAlign: 'center',
+				marginTop: '2rem',
+				fontStyle: 'italic',
+				fontSize: '0.9rem',
+				color: '#555',
+				}}
+				>
+				💨 OBS vid låga vindhastigheter kan PET-värdet mycket högt. Detta på grund av brister i beräkningsmodellen 💨
+				</p>
 
 			</div>
 		</div>

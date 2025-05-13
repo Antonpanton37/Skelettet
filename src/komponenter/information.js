@@ -64,7 +64,7 @@ export default function InformationCarousel() {
 
       <h1 className="text-2xl font-bold text-center mb-6">Generella råd</h1>
       <p className="OBS">❗️PET-värdet och de råd som presenteras är baserade på vetenskapliga källor, men är endast rekommendationer och utgör ingen garanti för din säkerhet. Vid hälsobesvär i samband med löpning rekommenderar vi att du kontaktar läkare.</p>
-
+    
       <div className="karusell">
         <h2 className="titel-text">{title}</h2>
         <p className="content-text">{content}</p>
