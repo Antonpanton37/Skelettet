@@ -4,7 +4,7 @@ import './information.css'; // Behåll om du har generell stil här
 
 const slides = [
   {
-    title: '❗️OBSERVERA❗️',
+    title: '❗️OBS❗️',
     content: `PET-värdet och de råd som presenteras på webbplatsen är baserade på vetenskapliga källor, men är endast rekommendationer och utgör ingen garanti för din säkerhet. Vid hälsobesvär i samband med löpning rekommenderar vi att du kontaktar läkare.`
   },
   {
