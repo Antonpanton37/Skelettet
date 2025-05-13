@@ -207,7 +207,7 @@ const RunningCalculator = () => {
 				color: '#555',
 				}}
 				>
-				❗️ OBS detta är endast råd, vid sjukdom uppsök läkare ❗️
+				❗️ OBS detta är endast råd. Vid sjukdom bör läkare kontaktas för medicinsk bedömning ❗️
 				</p>
 
 
