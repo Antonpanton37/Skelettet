@@ -220,7 +220,7 @@ const RunningCalculator = () => {
 				color: '#555',
 				}}
 				>
-				🌪️ OBS vid låga vindhastigheter kan PET-värdet mycket högt. Detta på grund av brister i beräkningsmodellen 🌪️
+				🌪️ OBS vid låga vindhastigheter kan PET-värdet bli mycket högt. Detta på grund av brister i beräkningsmodellen 🌪️
 				</p>
 
 			</div>
