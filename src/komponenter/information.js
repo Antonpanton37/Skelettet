@@ -4,10 +4,6 @@ import './information.css'; // Behåll om du har generell stil här
 
 const slides = [
   {
-    title: '❗️OBS❗️',
-    content: `PET-värdet och de råd som presenteras på webbplatsen är baserade på vetenskapliga källor, men är endast rekommendationer och utgör ingen garanti för din säkerhet. Vid hälsobesvär i samband med löpning rekommenderar vi att du kontaktar läkare.`
-  },
-  {
     title: 'Vätska',
     content: `Det är mycket viktigt att fylla på kroppens vattennivåer både före, under och efter löpning, särskilt när det är varmt ute och du svettas mycket! Drick hellre mindre mängder ofta än massor på en gång.`
   },
@@ -67,6 +63,8 @@ export default function InformationCarousel() {
 
 
       <h1 className="text-2xl font-bold text-center mb-6">Generella råd</h1>
+      <p className="OBS">❗️PET-värdet och de råd som presenteras är baserade på vetenskapliga källor, men är endast rekommendationer och utgör ingen garanti för din säkerhet. Vid hälsobesvär i samband med löpning rekommenderar vi att du kontaktar läkare❗️</p>
+
       <div className="karusell">
         <h2 className="titel-text">{title}</h2>
         <p className="content-text">{content}</p>
