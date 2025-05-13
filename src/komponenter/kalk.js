@@ -201,7 +201,7 @@ const RunningCalculator = () => {
 				className="extra-info"
 				style={{
 				textAlign: 'center',
-				marginTop: '2rem',
+				marginTop: '1rem',
 				fontStyle: 'italic',
 				fontSize: '0.9rem',
 				color: '#555',
@@ -214,7 +214,7 @@ const RunningCalculator = () => {
 				className="extra-info"
 				style={{
 				textAlign: 'center',
-				marginTop: '2rem',
+				marginTop: '0.1rem',
 				fontStyle: 'italic',
 				fontSize: '0.9rem',
 				color: '#555',
