@@ -13,7 +13,7 @@ function Footer() {
    
       <h2>Kontakta oss</h2>
       <p>För alla förfrågningar, tveka inte att höra av dig. Vi är alltid på jakt efter kreativa idéer, intressanta samarbetspartners och nya perspektiv.</p>
-      <p>info@runwise.se</p>
+      <p>info.runwise@gmail.com</p>
 
     </div>
 
