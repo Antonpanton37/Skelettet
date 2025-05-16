@@ -61,7 +61,7 @@ Biometeorology, årg. 52, s. 697–713, juni 2008, doi: 10.1007/s00484-008-0162-
        
                </li>
         <p className="thank-you-text">
-        Vi vill rikta ett stort tack till Magnus Karlsten, Hampus Lüning och Fredrik Lindberg för deras stora engagemang och expertis inom området, 
+        Vi vill rikta ett stort tack till Magnus Karlsteen, Hampus Lüning och Fredrik Lindberg för deras stora engagemang och expertis inom området, 
         samt tacka Nils Bredin och Tilde Johansson för de fina bilderna. 
       </p>
       <p className="thank-you-text">
